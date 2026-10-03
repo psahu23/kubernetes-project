@@ -1,0 +1,1913 @@
+default password :a2A726Nyap755hb for NEW VM.
+
+user: admin
+
+
+1. uncomment the IP in /etc/hosts.
+2. create password less connectvity for ICO server where we need to upgrade by usng below command :
+
+[admin@testom1 ~]$ ssh-copy-id -p 5588 admin@am00
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/admin/.ssh/id_rsa.pub"
+The authenticity of host '[am00]:5588 ([10.135.148.247]:5588)' can't be established.
+ECDSA key fingerprint is SHA256:Mi28kyw//H4+lhjGMP86OEQ3CayxW8jt4MX/jjBJtMU.
+ECDSA key fingerprint is MD5:c9:ee:70:df:c7:3a:71:cc:71:1e:87:81:ae:ec:95:9d.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
+/usr/bin/ssh-copy-id: WARNING: All keys were skipped because they already exist on the remote system.
+                (if you think this is a mistake, you may want to use -f option)
+
+[admin@testom1 ~]$ 
+[admin@testom1 ~]$ 
+[admin@testom1 ~]$ 
+[admin@testom1 ~]$ ssh -p 5588 admin@am00
+Authorized uses only. All activity may be monitored and reported.
+Last login: Mon Aug  9 10:01:15 2021 from gateway
+Authorized uses only. All activity may be monitored and reported.
+[admin@bjtestico00 ~]$ 
+
+
+[admin@testom1 ~]$ cd cd /opt/ewp/mgmtsrv
+-bash: cd: cd: No such file or directory
+[admin@testom1 ~]$ 
+[admin@testom1 ~]$ 
+[admin@testom1 ~]$ cd /opt/ewp/mgmtsrv
+[admin@testom1 mgmtsrv]$ ls -ltrh
+total 684K
+-rw-r--r--  1 admin admin  381 Jul 16 07:31 README.md
+-rw-r--r--  1 admin admin 4.8K Jul 16 07:31 build.gradle
+-rw-r--r--  1 admin admin  445 Jul 16 07:31 ansible.cfg
+drwxr-xr-x  3 admin admin   17 Jul 16 07:31 inventory
+drwxrwxrwx  2 admin admin   26 Jul 16 07:31 documentation
+-rw-r--r--  1 admin admin   70 Jul 16 07:32 version.txt
+drwxrwxrwx 47 admin admin 4.0K Jul 16 07:32 roles
+drwxrwxrwx  2 admin admin 4.0K Jul 16 07:32 playbooks
+drwxr-xr-x  2 admin admin   49 Jul 28 07:24 vaults
+drwxr-xr-x  2 admin admin 4.0K Aug  4 06:32 packages
+-rw-r--r--  1 admin admin 649K Aug  4 07:03 ansible.log
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ ansible rhel7 -m shell -a 'df -kh' -b
+rds00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds00: Name or service not known", 
+    "unreachable": true
+}
+rds01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds01: Name or service not known", 
+    "unreachable": true
+}
+cm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cm00: Name or service not known", 
+    "unreachable": true
+}
+bws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws01: Name or service not known", 
+    "unreachable": true
+}
+bws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws00: Name or service not known", 
+    "unreachable": true
+}
+ico00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ico00: Name or service not known", 
+    "unreachable": true
+}
+pws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws01: Name or service not known", 
+    "unreachable": true
+}
+pws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws00: Name or service not known", 
+    "unreachable": true
+}
+rdsdb00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rdsdb00: Name or service not known", 
+    "unreachable": true
+}
+ers01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers01: Name or service not known", 
+    "unreachable": true
+}
+ers00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers00: Name or service not known", 
+    "unreachable": true
+}
+ss00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss00: Name or service not known", 
+    "unreachable": true
+}
+ss01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss01: Name or service not known", 
+    "unreachable": true
+}
+db00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname db00: Name or service not known", 
+    "unreachable": true
+}
+loan00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan00: Name or service not known", 
+    "unreachable": true
+}
+loan01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan01: Name or service not known", 
+    "unreachable": true
+}
+am01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname am01: Name or service not known", 
+    "unreachable": true
+}
+poco01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco01: Name or service not known", 
+    "unreachable": true
+}
+poco00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco00: Name or service not known", 
+    "unreachable": true
+}
+bp00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp00: Name or service not known", 
+    "unreachable": true
+}
+bp01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp01: Name or service not known", 
+    "unreachable": true
+}
+pg01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg01: Name or service not known", 
+    "unreachable": true
+}
+pg00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg00: Name or service not known", 
+    "unreachable": true
+}
+mmm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm00: Name or service not known", 
+    "unreachable": true
+}
+mmm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm01: Name or service not known", 
+    "unreachable": true
+}
+ns01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns01: Name or service not known", 
+    "unreachable": true
+}
+ns00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns00: Name or service not known", 
+    "unreachable": true
+}
+cws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws00: Name or service not known", 
+    "unreachable": true
+}
+cws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws01: Name or service not known", 
+    "unreachable": true
+}
+am00 | CHANGED | rc=0 >>
+Filesystem                            Size  Used Avail Use% Mounted on
+devtmpfs                              5.8G     0  5.8G   0% /dev
+tmpfs                                 5.8G     0  5.8G   0% /dev/shm
+tmpfs                                 5.8G  121M  5.7G   3% /run
+tmpfs                                 5.8G     0  5.8G   0% /sys/fs/cgroup
+/dev/mapper/vg_rhel-lv_root            20G  1.8G   19G   9% /
+tmpfs                                 5.8G  208K  5.8G   1% /tmp
+/dev/sda2                            1014M  340M  675M  34% /boot
+/dev/mapper/vg_rhel-lv_var            2.0G  190M  1.9G  10% /var
+/dev/mapper/vg_rhel-lv_home            20G  880M   20G   5% /home
+/dev/mapper/vg_rhel-lv_var_log        8.0G   99M  7.9G   2% /var/log
+/dev/mapper/vg_rhel-lv_var_log_audit   10G  299M  9.7G   3% /var/log/audit
+/dev/mapper/vg_rhel-lv_var_tmp        2.0G   33M  2.0G   2% /var/tmp
+tmpfs                                 1.2G     0  1.2G   0% /run/user/1212
+ms00 | CHANGED | rc=0 >>
+Filesystem                            Size  Used Avail Use% Mounted on
+devtmpfs                              888M     0  888M   0% /dev
+tmpfs                                 920M  128K  920M   1% /dev/shm
+tmpfs                                 920M  120M  800M  14% /run
+tmpfs                                 920M     0  920M   0% /sys/fs/cgroup
+/dev/mapper/vg_rhel-lv_root            20G  2.4G   18G  12% /
+tmpfs                                 920M  208K  919M   1% /tmp
+/dev/mapper/vg_rhel-lv_var            2.0G  245M  1.8G  13% /var
+/dev/sda2                            1014M  361M  654M  36% /boot
+/dev/mapper/vg_rhel-lv_var_tmp        2.0G   33M  2.0G   2% /var/tmp
+/dev/mapper/vg_rhel-lv_var_log        8.0G  123M  7.9G   2% /var/log
+/dev/mapper/vg_ewp-lv_ewp             100G   31G   70G  31% /opt/ewp
+/dev/mapper/vg_rhel-lv_var_log_audit   10G  1.5G  8.6G  15% /var/log/audit
+/dev/mapper/vg_rhel-lv_home            20G   20G  479M  98% /home
+tmpfs                                 184M     0  184M   0% /run/user/1212
+[admin@testom1 mgmtsrv]$ 
+
+
+[admin@testom1 mgmtsrv]$ cd /opt/ewp/repos
+[admin@testom1 repos]$ ls -ltrh
+total 1.3G
+drwxr-xr-x 3 admin admin 4.0K Dec 17  2018 ms_repo
+-rw-r--r-- 1 admin admin  169 Dec 20  2018 ms_repo.repo
+-rw-r--r-- 1 admin admin  738 Dec 20  2018 README.txt
+drwxr-x--- 3 admin admin 4.0K Nov  1  2019 ewp_ansible_rhel7
+drwxr-xr-x 3 admin admin 4.0K Jan 15  2020 os-repo-2.1.0
+drwxr-xr-x 3 admin admin 4.0K Jan 15  2020 os-repo-supporttools-2.1.0
+drwxr-xr-x 3 admin admin 4.0K Mar  3  2020 ewp_docker
+drwxr-xr-x 3 admin admin 4.0K Mar 26  2020 os-repo-supporttools-2.1.1
+lrwxrwxrwx 1 admin admin   13 Apr 28  2020 ewp_os_rhel7_1 -> os-repo-2.1.0
+lrwxrwxrwx 1 admin admin   26 Apr 28  2020 ewp_supportTools_rhel7_1 -> os-repo-supporttools-2.1.0
+lrwxrwxrwx 1 admin admin   13 Apr 28  2020 ewp_os_rhel7_2 -> os-repo-2.1.1
+lrwxrwxrwx 1 admin admin   26 Apr 28  2020 ewp_supportTools_rhel7_2 -> os-repo-supporttools-2.1.1
+drwxr-xr-x 3 admin admin 4.0K May  6  2020 os-repo-2.1.2-rc1
+drwxr-xr-x 3 admin admin 4.0K May  7  2020 os-repo-supporttools-2.1.2-rc1
+lrwxrwxrwx 1 admin admin   17 Jun 12  2020 ewp_os_rhel7_3 -> os-repo-2.1.2-rc1
+lrwxrwxrwx 1 admin admin   31 Jun 25  2020 ewp_supportTools_rhel7_3 -> os-repo-supporttools-2.1.2-rc1/
+drwxr-xr-x 3 admin admin 4.0K Jun 25  2020 os-repo-2.1.1
+drwxr-xr-x 3 admin admin  12K Jun 29  2020 os-repo-2.2.0-rc3
+drwxr-xr-x 3 admin admin 4.0K Jun 30  2020 os-repo-supporttools-2.2.0-rc2
+-rwxr-xr-x 1 admin admin  20M Aug  4  2020 os-repo-supporttools-2.2.0-rc2.tar.gz
+-rwxr-xr-x 1 admin admin 383M Aug  4  2020 os-repo-2.2.0-rc3.tar.gz
+lrwxrwxrwx 1 admin admin   17 Aug  4  2020 ewp_os_rhel7_4 -> os-repo-2.2.0-rc3
+lrwxrwxrwx 1 admin admin   30 Aug  4  2020 ewp_supportTools_rhel7_4 -> os-repo-supporttools-2.2.0-rc2
+drwxr-xr-x 3 admin admin 4.0K Sep  7  2020 os-repo-supporttools-2.2.1-rc1
+drwxr-xr-x 3 admin admin 4.0K Sep  8  2020 os-repo-2.2.1-rc1
+lrwxrwxrwx 1 admin admin   17 Oct 27  2020 ewp_os_rhel7_5 -> os-repo-2.2.1-rc1
+lrwxrwxrwx 1 admin admin   30 Oct 27  2020 ewp_supportTools_rhel7_5 -> os-repo-supporttools-2.2.1-rc1
+drwxr-xr-x 3 admin admin  12K Nov 19  2020 os-repo-2.3.0-rc4
+drwxr-xr-x 3 admin admin 4.0K Nov 19  2020 os-repo-supporttools-2.3.0-rc2
+-rwxr-xr-x 1 admin admin  20M Nov 30  2020 os-repo-supporttools-2.3.0-rc2.tar.gz
+-rwxr-xr-x 1 admin admin 425M Nov 30  2020 os-repo-2.3.0-rc4.tar.gz
+lrwxrwxrwx 1 admin admin   17 Dec 23  2020 ewp_os_rhel7_6 -> os-repo-2.3.0-rc4
+lrwxrwxrwx 1 admin admin   30 Dec 23  2020 ewp_supportTools_rhel7_6 -> os-repo-supporttools-2.3.0-rc2
+drwxr-xr-x 3 admin admin  12K Feb  3  2021 os-repo-2.4.0-rc3
+drwxr-xr-x 3 admin admin 4.0K Feb  3  2021 os-repo-supporttools-2.4.0-rc2
+lrwxrwxrwx 1 admin admin   17 Feb 22 15:08 ewp_os_rhel7_8 -> os-repo-2.4.0-rc3
+lrwxrwxrwx 1 admin admin   30 Feb 22 15:09 ewp_supportTools_rhel7_8 -> os-repo-supporttools-2.4.0-rc2
+drwxr-xr-x 3 admin admin  12K Mar  9 14:27 os-repo-2.4.1-rc2
+lrwxrwxrwx 1 admin admin   17 Apr  5 09:56 ewp_os_rhel7_9 -> os-repo-2.4.1-rc2
+lrwxrwxrwx 1 admin admin   30 Apr  5 09:56 ewp_supportTools_rhel7_9 -> os-repo-supporttools-2.4.1-rc1
+drwxr-xr-x 3 admin admin 4.0K Apr 19 14:04 os-repo-supporttools-2.4.1-rc1
+lrwxrwxrwx 1 admin admin   17 Jun  2 16:03 ewp_os_rhel7_10 -> os-repo-3.3.0-rc2
+drwxr-xr-x 4 admin admin  12K Jun  2 16:41 os-repo-3.3.0-rc2
+lrwxrwxrwx 1 admin admin   32 Jun  8 08:04 ewp_os_rhel7 -> /opt/ewp/repos/os-repo-2.4.1-rc2
+drwxr-xr-x 4 admin admin  12K Jun 14 15:30 os-repo-3.3.1-rc3
+-rwxr-xr-x 1 admin admin 397M Jul 16 07:00 os-repo-3.3.1-rc3.tar.gz
+lrwxrwxrwx 1 admin admin   17 Jul 16 07:27 ewp_os_rhel7_11 -> os-repo-3.3.1-rc3
+[admin@testom1 repos]$ 
+
+
+
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo  rpm -qa| grep -i httpd
+httpd-2.4.6-97.el7_9.x86_64
+httpd-tools-2.4.6-97.el7_9.x86_64
+
+
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ systemctl status httpd
+â— httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2021-06-02 17:01:04 GMT; 2 months 6 days ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 20079 ExecReload=/usr/sbin/httpd $OPTIONS -k graceful (code=exited, status=0/SUCCESS)
+ Main PID: 6377 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           â”œâ”€ 6377 /usr/sbin/httpd -DFOREGROUND
+           â”œâ”€20083 /usr/sbin/httpd -DFOREGROUND
+           â”œâ”€20084 /usr/sbin/httpd -DFOREGROUND
+           â”œâ”€20085 /usr/sbin/httpd -DFOREGROUND
+           â”œâ”€20086 /usr/sbin/httpd -DFOREGROUND
+           â”œâ”€20087 /usr/sbin/httpd -DFOREGROUND
+           â””â”€20680 /usr/sbin/httpd -DFOREGROUND
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo ls -la /etc/yum.repos.d/ewp_os_rhel7_11.repo
+-rw-r--r-- 1 root root 157 Jul 16 07:28 /etc/yum.repos.d/ewp_os_rhel7_11.repo
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo yum updateinfo
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+ewp_ansible_rhel7                                                                                                                 | 2.9 kB  00:00:00     
+ewp_docker                                                                                                                        | 2.9 kB  00:00:00     
+ewp_os_rhel7                                                                                                                      | 2.9 kB  00:00:00     
+ewp_os_rhel7_10                                                                                                                   | 2.9 kB  00:00:00     
+ewp_os_rhel7_11                                                                                                                   | 2.9 kB  00:00:00     
+ewp_os_rhel7_2                                                                                                                    | 2.9 kB  00:00:00     
+ewp_os_rhel7_3                                                                                                                    | 2.9 kB  00:00:00     
+ewp_os_rhel7_4                                                                                                                    | 2.9 kB  00:00:00     
+ewp_os_rhel7_5                                                                                                                    | 2.9 kB  00:00:00     
+ewp_os_rhel7_6                                                                                                                    | 2.9 kB  00:00:00     
+ewp_os_rhel7_8                                                                                                                    | 2.9 kB  00:00:00     
+ewp_os_rhel7_9                                                                                                                    | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_2                                                                                                          | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_3                                                                                                          | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_4                                                                                                          | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_5                                                                                                          | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_6                                                                                                          | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_8                                                                                                          | 2.9 kB  00:00:00     
+ewp_supportTools_rhel7_9                                                                                                          | 2.9 kB  00:00:00     
+updateinfo summary done
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo yum clean all
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Cleaning repos: ewp_ansible_rhel7 ewp_docker ewp_os_rhel7 ewp_os_rhel7_10 ewp_os_rhel7_11 ewp_os_rhel7_2 ewp_os_rhel7_3 ewp_os_rhel7_4 ewp_os_rhel7_5
+              : ewp_os_rhel7_6 ewp_os_rhel7_8 ewp_os_rhel7_9 ewp_supportTools_rhel7_2 ewp_supportTools_rhel7_3 ewp_supportTools_rhel7_4
+              : ewp_supportTools_rhel7_5 ewp_supportTools_rhel7_6 ewp_supportTools_rhel7_8 ewp_supportTools_rhel7_9
+Other repos take up 104 k of disk space (use --verbose for details)
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo ls -la /var/www/html
+total 4
+drwxr-xr-x 2 root root 4096 Jul 16 07:29 .
+drwxr-xr-x 4 root root   33 Oct  9  2020 ..
+lrwxrwxrwx 1 root root   25 Jun  8 08:04 ewp_docker -> /opt/ewp/repos/ewp_docker
+lrwxrwxrwx 1 root root   27 Jun  8 08:04 ewp_os_rhel7 -> /opt/ewp/repos/ewp_os_rhel7
+lrwxrwxrwx 1 root root   29 Apr 28  2020 ewp_os_rhel7_1 -> /opt/ewp/repos/ewp_os_rhel7_1
+lrwxrwxrwx 1 root root   30 Jun  2 16:05 ewp_os_rhel7_10 -> /opt/ewp/repos/ewp_os_rhel7_10
+lrwxrwxrwx 1 root root   30 Jul 16 07:29 ewp_os_rhel7_11 -> /opt/ewp/repos/ewp_os_rhel7_11
+lrwxrwxrwx 1 root root   29 Apr 28  2020 ewp_os_rhel7_2 -> /opt/ewp/repos/ewp_os_rhel7_2
+lrwxrwxrwx 1 root root   30 Jun 25  2020 ewp_os_rhel7_3 -> /opt/ewp/repos/ewp_os_rhel7_3/
+lrwxrwxrwx 1 root root   30 Aug  4  2020 ewp_os_rhel7_4 -> /opt/ewp/repos/ewp_os_rhel7_4/
+lrwxrwxrwx 1 root root   29 Oct 27  2020 ewp_os_rhel7_5 -> /opt/ewp/repos/ewp_os_rhel7_5
+lrwxrwxrwx 1 root root   29 Dec 23  2020 ewp_os_rhel7_6 -> /opt/ewp/repos/ewp_os_rhel7_6
+lrwxrwxrwx 1 root root   29 Feb 22 15:14 ewp_os_rhel7_8 -> /opt/ewp/repos/ewp_os_rhel7_8
+lrwxrwxrwx 1 root root   29 Apr  5 10:02 ewp_os_rhel7_9 -> /opt/ewp/repos/ewp_os_rhel7_9
+lrwxrwxrwx 1 root root   39 Apr 28  2020 ewp_supportTools_rhel7_1 -> /opt/ewp/repos/ewp_supportTools_rhel7_1
+lrwxrwxrwx 1 root root   39 Apr 28  2020 ewp_supportTools_rhel7_2 -> /opt/ewp/repos/ewp_supportTools_rhel7_2
+lrwxrwxrwx 1 root root   40 Jun 25  2020 ewp_supportTools_rhel7_3 -> /opt/ewp/repos/ewp_supportTools_rhel7_3/
+lrwxrwxrwx 1 root root   39 Aug  4  2020 ewp_supportTools_rhel7_4 -> /opt/ewp/repos/ewp_supportTools_rhel7_4
+lrwxrwxrwx 1 root root   39 Oct 27  2020 ewp_supportTools_rhel7_5 -> /opt/ewp/repos/ewp_supportTools_rhel7_5
+lrwxrwxrwx 1 root root   39 Dec 23  2020 ewp_supportTools_rhel7_6 -> /opt/ewp/repos/ewp_supportTools_rhel7_6
+lrwxrwxrwx 1 root root   39 Feb 22 15:14 ewp_supportTools_rhel7_8 -> /opt/ewp/repos/ewp_supportTools_rhel7_8
+lrwxrwxrwx 1 root root   39 Apr  5 10:02 ewp_supportTools_rhel7_9 -> /opt/ewp/repos/ewp_supportTools_rhel7_9
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo yum clean all
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Cleaning repos: ewp_ansible_rhel7 ewp_docker ewp_os_rhel7 ewp_os_rhel7_10 ewp_os_rhel7_11 ewp_os_rhel7_2 ewp_os_rhel7_3 ewp_os_rhel7_4 ewp_os_rhel7_5
+              : ewp_os_rhel7_6 ewp_os_rhel7_8 ewp_os_rhel7_9 ewp_supportTools_rhel7_2 ewp_supportTools_rhel7_3 ewp_supportTools_rhel7_4
+              : ewp_supportTools_rhel7_5 ewp_supportTools_rhel7_6 ewp_supportTools_rhel7_8 ewp_supportTools_rhel7_9
+Other repos take up 104 k of disk space (use --verbose for details)
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ sudo yum --disablerepo "*" --enablerepo "ewp_os_rhel7_11" repolist enabled
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+ewp_os_rhel7_11                                                                                                                   | 2.9 kB  00:00:00     
+ewp_os_rhel7_11/primary_db                                                                                                        | 719 kB  00:00:00     
+repo id                                                                  repo name                                                                 status
+ewp_os_rhel7_11                                                          ewp_os_rhel7_11                                                           193
+repolist: 193
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ 
+[admin@testom1 repos]$ cd /opt/ewp/mgmtsrv
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ ls -ltrh
+total 692K
+-rw-r--r--  1 admin admin  381 Jul 16 07:31 README.md
+-rw-r--r--  1 admin admin 4.8K Jul 16 07:31 build.gradle
+-rw-r--r--  1 admin admin  445 Jul 16 07:31 ansible.cfg
+drwxr-xr-x  3 admin admin   17 Jul 16 07:31 inventory
+drwxrwxrwx  2 admin admin   26 Jul 16 07:31 documentation
+-rw-r--r--  1 admin admin   70 Jul 16 07:32 version.txt
+drwxrwxrwx 47 admin admin 4.0K Jul 16 07:32 roles
+drwxrwxrwx  2 admin admin 4.0K Jul 16 07:32 playbooks
+drwxr-xr-x  2 admin admin   49 Jul 28 07:24 vaults
+drwxr-xr-x  2 admin admin 4.0K Aug  4 06:32 packages
+-rw-r--r--  1 admin admin 657K Aug  9 09:18 ansible.log
+[admin@testom1 mgmtsrv]$ 
+
+
+
+
+
+
+copy files to ICO servers:
+
+
+[admin@testom1 mgmtsrv]$ ls -ltrh
+total 692K
+-rw-r--r--  1 admin admin  381 Jul 16 07:31 README.md
+-rw-r--r--  1 admin admin 4.8K Jul 16 07:31 build.gradle
+-rw-r--r--  1 admin admin  445 Jul 16 07:31 ansible.cfg
+drwxr-xr-x  3 admin admin   17 Jul 16 07:31 inventory
+drwxrwxrwx  2 admin admin   26 Jul 16 07:31 documentation
+-rw-r--r--  1 admin admin   70 Jul 16 07:32 version.txt
+drwxrwxrwx 47 admin admin 4.0K Jul 16 07:32 roles
+drwxrwxrwx  2 admin admin 4.0K Jul 16 07:32 playbooks
+drwxr-xr-x  2 admin admin   49 Jul 28 07:24 vaults
+drwxr-xr-x  2 admin admin 4.0K Aug  4 06:32 packages
+-rw-r--r--  1 admin admin 657K Aug  9 09:18 ansible.log
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ ansible all -b -m copy -a 'src=/etc/yum.repos.d/ewp_os_rhel7_11.repo dest=/etc/yum.repos.d/ewp_os_rhel7_11.repo'
+cm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cm00: Name or service not known", 
+    "unreachable": true
+}
+loan00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan00: Name or service not known", 
+    "unreachable": true
+}
+loan01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan01: Name or service not known", 
+    "unreachable": true
+}
+am01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname am01: Name or service not known", 
+    "unreachable": true
+}
+rdsdb00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rdsdb00: Name or service not known", 
+    "unreachable": true
+}
+ico00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ico00: Name or service not known", 
+    "unreachable": true
+}
+cws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws00: Name or service not known", 
+    "unreachable": true
+}
+cws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws01: Name or service not known", 
+    "unreachable": true
+}
+poco01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco01: Name or service not known", 
+    "unreachable": true
+}
+poco00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco00: Name or service not known", 
+    "unreachable": true
+}
+pg01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg01: Name or service not known", 
+    "unreachable": true
+}
+pg00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg00: Name or service not known", 
+    "unreachable": true
+}
+mmm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm00: Name or service not known", 
+    "unreachable": true
+}
+mmm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm01: Name or service not known", 
+    "unreachable": true
+}
+ns01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns01: Name or service not known", 
+    "unreachable": true
+}
+ns00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns00: Name or service not known", 
+    "unreachable": true
+}
+bws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws01: Name or service not known", 
+    "unreachable": true
+}
+bws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws00: Name or service not known", 
+    "unreachable": true
+}
+pws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws01: Name or service not known", 
+    "unreachable": true
+}
+pws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws00: Name or service not known", 
+    "unreachable": true
+}
+db00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname db00: Name or service not known", 
+    "unreachable": true
+}
+hsm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname hsm01: Name or service not known", 
+    "unreachable": true
+}
+hsm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname hsm00: Name or service not known", 
+    "unreachable": true
+}
+bp00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp00: Name or service not known", 
+    "unreachable": true
+}
+bp01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp01: Name or service not known", 
+    "unreachable": true
+}
+rds00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds00: Name or service not known", 
+    "unreachable": true
+}
+rds01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds01: Name or service not known", 
+    "unreachable": true
+}
+ers01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers01: Name or service not known", 
+    "unreachable": true
+}
+ers00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers00: Name or service not known", 
+    "unreachable": true
+}
+ss00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss00: Name or service not known", 
+    "unreachable": true
+}
+ss01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss01: Name or service not known", 
+    "unreachable": true
+}
+am00 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "checksum": "b216eec32f0ecdf37294955050d3c887f707a7f4", 
+    "dest": "/etc/yum.repos.d/ewp_os_rhel7_11.repo", 
+    "gid": 0, 
+    "group": "root", 
+    "mode": "0640", 
+    "owner": "root", 
+    "path": "/etc/yum.repos.d/ewp_os_rhel7_11.repo", 
+    "size": 157, 
+    "state": "file", 
+    "uid": 0
+}
+ms00 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "checksum": "b216eec32f0ecdf37294955050d3c887f707a7f4", 
+    "dest": "/etc/yum.repos.d/ewp_os_rhel7_11.repo", 
+    "gid": 0, 
+    "group": "root", 
+    "mode": "0644", 
+    "owner": "root", 
+    "path": "/etc/yum.repos.d/ewp_os_rhel7_11.repo", 
+    "size": 157, 
+    "state": "file", 
+    "uid": 0
+}
+[admin@testom1 mgmtsrv]$ ansible all -b -a "yum clean all"
+cm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cm00: Name or service not known", 
+    "unreachable": true
+}
+loan00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan00: Name or service not known", 
+    "unreachable": true
+}
+loan01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan01: Name or service not known", 
+    "unreachable": true
+}
+am01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname am01: Name or service not known", 
+    "unreachable": true
+}
+rdsdb00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rdsdb00: Name or service not known", 
+    "unreachable": true
+}
+ico00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ico00: Name or service not known", 
+    "unreachable": true
+}
+cws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws00: Name or service not known", 
+    "unreachable": true
+}
+cws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws01: Name or service not known", 
+    "unreachable": true
+}
+poco01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco01: Name or service not known", 
+    "unreachable": true
+}
+poco00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco00: Name or service not known", 
+    "unreachable": true
+}
+pg01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg01: Name or service not known", 
+    "unreachable": true
+}
+pg00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg00: Name or service not known", 
+    "unreachable": true
+}
+mmm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm00: Name or service not known", 
+    "unreachable": true
+}
+mmm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm01: Name or service not known", 
+    "unreachable": true
+}
+ns01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns01: Name or service not known", 
+    "unreachable": true
+}
+ns00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns00: Name or service not known", 
+    "unreachable": true
+}
+bws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws01: Name or service not known", 
+    "unreachable": true
+}
+bws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws00: Name or service not known", 
+    "unreachable": true
+}
+pws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws01: Name or service not known", 
+    "unreachable": true
+}
+pws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws00: Name or service not known", 
+    "unreachable": true
+}
+db00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname db00: Name or service not known", 
+    "unreachable": true
+}
+hsm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname hsm01: Name or service not known", 
+    "unreachable": true
+}
+hsm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname hsm00: Name or service not known", 
+    "unreachable": true
+}
+bp00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp00: Name or service not known", 
+    "unreachable": true
+}
+rds00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds00: Name or service not known", 
+    "unreachable": true
+}
+bp01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp01: Name or service not known", 
+    "unreachable": true
+}
+rds01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds01: Name or service not known", 
+    "unreachable": true
+}
+ers01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers01: Name or service not known", 
+    "unreachable": true
+}
+ers00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers00: Name or service not known", 
+    "unreachable": true
+}
+ss00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss00: Name or service not known", 
+    "unreachable": true
+}
+ss01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss01: Name or service not known", 
+    "unreachable": true
+}
+[WARNING]: Consider using the yum module rather than running 'yum'.  If you need to use command because yum is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+am00 | CHANGED | rc=0 >>
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Cleaning repos: ewp_os_rhel7_11 ewp_os_rhel7_6 ewp_supportTools_rhel7_6
+ms00 | CHANGED | rc=0 >>
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Cleaning repos: ewp_ansible_rhel7 ewp_docker ewp_os_rhel7 ewp_os_rhel7_10
+              : ewp_os_rhel7_11 ewp_os_rhel7_2 ewp_os_rhel7_3 ewp_os_rhel7_4
+              : ewp_os_rhel7_5 ewp_os_rhel7_6 ewp_os_rhel7_8 ewp_os_rhel7_9
+              : ewp_supportTools_rhel7_2 ewp_supportTools_rhel7_3
+              : ewp_supportTools_rhel7_4 ewp_supportTools_rhel7_5
+              : ewp_supportTools_rhel7_6 ewp_supportTools_rhel7_8
+              : ewp_supportTools_rhel7_9
+Other repos take up 104 k of disk space (use --verbose for details)
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ 
+[admin@testom1 mgmtsrv]$ ansible all -b -a "yum updateinfo"
+cm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cm00: Name or service not known", 
+    "unreachable": true
+}
+loan00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan00: Name or service not known", 
+    "unreachable": true
+}
+loan01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname loan01: Name or service not known", 
+    "unreachable": true
+}
+am01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname am01: Name or service not known", 
+    "unreachable": true
+}
+ico00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ico00: Name or service not known", 
+    "unreachable": true
+}
+rdsdb00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rdsdb00: Name or service not known", 
+    "unreachable": true
+}
+cws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws00: Name or service not known", 
+    "unreachable": true
+}
+cws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname cws01: Name or service not known", 
+    "unreachable": true
+}
+poco01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco01: Name or service not known", 
+    "unreachable": true
+}
+poco00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname poco00: Name or service not known", 
+    "unreachable": true
+}
+pg01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg01: Name or service not known", 
+    "unreachable": true
+}
+pg00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pg00: Name or service not known", 
+    "unreachable": true
+}
+mmm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm00: Name or service not known", 
+    "unreachable": true
+}
+mmm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mmm01: Name or service not known", 
+    "unreachable": true
+}
+ns01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns01: Name or service not known", 
+    "unreachable": true
+}
+ns00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ns00: Name or service not known", 
+    "unreachable": true
+}
+bws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws01: Name or service not known", 
+    "unreachable": true
+}
+bws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bws00: Name or service not known", 
+    "unreachable": true
+}
+pws01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws01: Name or service not known", 
+    "unreachable": true
+}
+pws00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname pws00: Name or service not known", 
+    "unreachable": true
+}
+db00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname db00: Name or service not known", 
+    "unreachable": true
+}
+hsm01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname hsm01: Name or service not known", 
+    "unreachable": true
+}
+hsm00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname hsm00: Name or service not known", 
+    "unreachable": true
+}
+bp00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp00: Name or service not known", 
+    "unreachable": true
+}
+bp01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname bp01: Name or service not known", 
+    "unreachable": true
+}
+rds00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds00: Name or service not known", 
+    "unreachable": true
+}
+rds01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname rds01: Name or service not known", 
+    "unreachable": true
+}
+ers01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers01: Name or service not known", 
+    "unreachable": true
+}
+ers00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ers00: Name or service not known", 
+    "unreachable": true
+}
+ss00 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss00: Name or service not known", 
+    "unreachable": true
+}
+ss01 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ss01: Name or service not known", 
+    "unreachable": true
+}
+[WARNING]: Consider using the yum module rather than running 'yum'.  If you need to use command because yum is insufficient you can add 'warn: false' to
+this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+am00 | FAILED | rc=1 >>
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.http://testom1/ewp_os_rhel7_11/repodata/repomd.xml: [Errno 14] curl#6 - "Could not resolve host: testom1; Unknown error"
+Trying other mirror.
+
+
+ One of the configured repositories failed (ewp_os_rhel7_11),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=ewp_os_rhel7_11 ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable ewp_os_rhel7_11
+        or
+            subscription-manager repos --disable=ewp_os_rhel7_11
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=ewp_os_rhel7_11.skip_if_unavailable=true
+
+failure: repodata/repomd.xml from ewp_os_rhel7_11: [Errno 256] No more mirrors to try.
+http://testom1/ewp_os_rhel7_11/repodata/repomd.xml: [Errno 14] curl#6 - "Could not resolve host: testom1; Unknown error"non-zero return code
+ms00 | CHANGED | rc=0 >>
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+updateinfo summary done
+[admin@testom1 mgmtsrv]$ 
+
+
+
+
+the below error is comes then login to ICO nodes then add the Both the OM and ICO ip in the /etc/hosts file both the IP:
+
+
+after that all steps will be done on ICO server :
+
+[admin@bjtestico00 ~]$ cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.135.148.247 BJTESTICO00 ico00
+10.135.148.124 testom1 ms00
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ sudo -s
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo yum clean all
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Cleaning repos: ewp_os_rhel7_11
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo yum --disablerepo "*" --enablerepo "ewp_os_rhel7_9" repolist enabled
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+
+
+Error getting repository data for ewp_os_rhel7_9, repository not found
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo yum --disablerepo "*" --enablerepo "ewp_os_rhel7_11" repolist enabled
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+ewp_os_rhel7_11                                                                                                                   | 2.9 kB  00:00:00     
+ewp_os_rhel7_11/primary_db                                                                                                        | 719 kB  00:00:00     
+repo id                                                                  repo name                                                                 status
+ewp_os_rhel7_11                                                          ewp_os_rhel7_11                                                           193
+repolist: 193
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo yum remove \*.i686 alsa-firmware alsa-lib btrfs-progs compat-exiv2-023 desktop-file-utils emacs-filesystem fxload jansson libjpeg-turbo libpng12 libteam plymouth-core-libs sg3_utils sg3_utils-libs wpa_supplicant screen libdaemon-0.14-7.el7.x86_64 libnl3-cli
+Loaded plugins: product-id, search-disabled-repos, subscription-managerLoaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Resolving Dependencies
+--> Running transaction check
+---> Package alsa-firmware.noarch 0:1.0.28-2.el7 will be erased
+--> Processing Dependency: alsa-firmware for package: alsa-tools-firmware-1.1.0-1.el7.x86_64
+---> Package alsa-lib.x86_64 0:1.1.8-1.el7 will be erased
+---> Package audit-libs.i686 0:2.8.5-4.el7 will be erased
+---> Package btrfs-progs.x86_64 0:4.9.1-1.el7 will be erased
+---> Package compat-exiv2-023.x86_64 0:0.23-2.el7 will be erased
+---> Package cracklib.i686 0:2.9.0-11.el7 will be erased
+---> Package desktop-file-utils.x86_64 0:0.23-2.el7 will be erased
+--> Processing Dependency: desktop-file-utils for package: xdg-utils-1.1.0-0.17.20120809git.el7.noarch
+---> Package emacs-filesystem.noarch 1:24.3-23.el7 will be erased
+---> Package fxload.x86_64 0:2002_04_11-16.el7 will be erased
+---> Package glibc.i686 0:2.17-323.el7_9 will be erased
+---> Package jansson.x86_64 0:2.10-1.el7 will be erased
+--> Processing Dependency: libjansson.so.4()(64bit) for package: teamd-1.29-3.el7.x86_64
+--> Processing Dependency: libjansson.so.4()(64bit) for package: 1:NetworkManager-team-1.18.8-2.el7_9.x86_64
+---> Package libcap-ng.i686 0:0.7.5-4.el7 will be erased
+---> Package libdaemon.x86_64 0:0.14-7.el7 will be erased
+---> Package libdb.i686 0:5.3.21-25.el7 will be erased
+---> Package libgcc.i686 0:4.8.5-44.el7 will be erased
+---> Package libjpeg-turbo.x86_64 0:1.2.90-8.el7 will be erased
+--> Processing Dependency: libjpeg.so.62()(64bit) for package: compat-libtiff3-3.9.4-12.el7.x86_64
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: compat-libtiff3-3.9.4-12.el7.x86_64
+---> Package libnl3-cli.x86_64 0:3.2.28-4.el7 will be erased
+---> Package libpng12.x86_64 0:1.2.50-10.el7 will be erased
+---> Package libselinux.i686 0:2.5-15.el7 will be erased
+---> Package libsepol.i686 0:2.5-10.el7 will be erased
+---> Package libstdc++.i686 0:4.8.5-44.el7 will be erased
+---> Package libteam.x86_64 0:1.29-3.el7 will be erased
+---> Package nss-softokn-freebl.i686 0:3.53.1-6.el7_9 will be erased
+---> Package pam.i686 0:1.1.8-23.el7 will be erased
+---> Package pcre.i686 0:8.32-17.el7 will be erased
+---> Package plymouth-core-libs.x86_64 0:0.8.9-0.34.20140113.el7 will be erased
+--> Processing Dependency: libply-splash-core.so.2()(64bit) for package: plymouth-0.8.9-0.34.20140113.el7.x86_64
+--> Processing Dependency: libply.so.2()(64bit) for package: plymouth-0.8.9-0.34.20140113.el7.x86_64
+--> Processing Dependency: plymouth-core-libs = 0.8.9-0.34.20140113.el7 for package: plymouth-0.8.9-0.34.20140113.el7.x86_64
+---> Package screen.x86_64 0:4.1.0-0.27.20120314git3c2946.el7_9 will be erased
+---> Package sg3_utils.x86_64 1:1.37-19.el7 will be erased
+---> Package sg3_utils-libs.x86_64 1:1.37-19.el7 will be erased
+---> Package wpa_supplicant.x86_64 1:2.6-12.el7 will be erased
+--> Processing Dependency: wpa_supplicant >= 1:1.1 for package: 1:NetworkManager-1.18.8-2.el7_9.x86_64
+---> Package zlib.i686 0:1.2.7-19.el7_9 will be erased
+--> Running transaction check
+---> Package NetworkManager.x86_64 1:1.18.8-2.el7_9 will be erased
+--> Processing Dependency: NetworkManager = 1:1.18.8-2.el7_9 for package: 1:NetworkManager-tui-1.18.8-2.el7_9.x86_64
+---> Package NetworkManager-team.x86_64 1:1.18.8-2.el7_9 will be erased
+---> Package alsa-tools-firmware.x86_64 0:1.1.0-1.el7 will be erased
+---> Package compat-libtiff3.x86_64 0:3.9.4-12.el7 will be erased
+---> Package plymouth.x86_64 0:0.8.9-0.34.20140113.el7 will be erased
+--> Processing Dependency: plymouth for package: plymouth-scripts-0.8.9-0.34.20140113.el7.x86_64
+---> Package teamd.x86_64 0:1.29-3.el7 will be erased
+---> Package xdg-utils.noarch 0:1.1.0-0.17.20120809git.el7 will be erased
+--> Processing Dependency: xdg-utils for package: Red_Hat_Enterprise_Linux-Release_Notes-7-en-US-7-2.el7.noarch
+--> Running transaction check
+---> Package NetworkManager-tui.x86_64 1:1.18.8-2.el7_9 will be erased
+---> Package Red_Hat_Enterprise_Linux-Release_Notes-7-en-US.noarch 0:7-2.el7 will be erased
+---> Package plymouth-scripts.x86_64 0:0.8.9-0.34.20140113.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=========================================================================================================================================================
+ Package                                                  Arch             Version                                       Repository                 Size
+=========================================================================================================================================================
+Removing:
+ alsa-firmware                                            noarch           1.0.28-2.el7                                  @anaconda/7.7             9.1 M
+ alsa-lib                                                 x86_64           1.1.8-1.el7                                   @anaconda/7.7             1.4 M
+ audit-libs                                               i686             2.8.5-4.el7                                   @anaconda/7.7             244 k
+ btrfs-progs                                              x86_64           4.9.1-1.el7                                   @anaconda/7.7             4.0 M
+ compat-exiv2-023                                         x86_64           0.23-2.el7                                    @anaconda/7.7             2.3 M
+ cracklib                                                 i686             2.9.0-11.el7                                  @anaconda/7.7             186 k
+ desktop-file-utils                                       x86_64           0.23-2.el7                                    @anaconda/7.7             204 k
+ emacs-filesystem                                         noarch           1:24.3-23.el7                                 @ewp_os_rhel7_6           0.0  
+ fxload                                                   x86_64           2002_04_11-16.el7                             @anaconda/7.7              42 k
+ glibc                                                    i686             2.17-323.el7_9                                @ewp_os_rhel7_6            15 M
+ jansson                                                  x86_64           2.10-1.el7                                    @anaconda/7.7              73 k
+ libcap-ng                                                i686             0.7.5-4.el7                                   @anaconda/7.7              44 k
+ libdaemon                                                x86_64           0.14-7.el7                                    @anaconda/7.7              61 k
+ libdb                                                    i686             5.3.21-25.el7                                 @anaconda/7.7             1.8 M
+ libgcc                                                   i686             4.8.5-44.el7                                  @ewp_os_rhel7_6           190 k
+ libjpeg-turbo                                            x86_64           1.2.90-8.el7                                  @anaconda/7.7             342 k
+ libnl3-cli                                               x86_64           3.2.28-4.el7                                  @anaconda/7.7             690 k
+ libpng12                                                 x86_64           1.2.50-10.el7                                 @anaconda/7.7             615 k
+ libselinux                                               i686             2.5-15.el7                                    @ewp_os_rhel7_6           206 k
+ libsepol                                                 i686             2.5-10.el7                                    @anaconda/7.7             690 k
+ libstdc++                                                i686             4.8.5-44.el7                                  @ewp_os_rhel7_6           997 k
+ libteam                                                  x86_64           1.29-3.el7                                    @ewp_os_rhel7_6            98 k
+ nss-softokn-freebl                                       i686             3.53.1-6.el7_9                                @ewp_os_rhel7_6           751 k
+ pam                                                      i686             1.1.8-23.el7                                  @ewp_os_rhel7_6           2.4 M
+ pcre                                                     i686             8.32-17.el7                                   @anaconda/7.7             1.4 M
+ plymouth-core-libs                                       x86_64           0.8.9-0.34.20140113.el7                       @ewp_os_rhel7_6           217 k
+ screen                                                   x86_64           4.1.0-0.27.20120314git3c2946.el7_9            @ewp_os_rhel7_6           914 k
+ sg3_utils                                                x86_64           1:1.37-19.el7                                 @ewp_os_rhel7_6           1.7 M
+ sg3_utils-libs                                           x86_64           1:1.37-19.el7                                 @ewp_os_rhel7_6           180 k
+ wpa_supplicant                                           x86_64           1:2.6-12.el7                                  @anaconda/7.7             4.2 M
+ zlib                                                     i686             1.2.7-19.el7_9                                @ewp_os_rhel7_6           180 k
+Removing for dependencies:
+ NetworkManager                                           x86_64           1:1.18.8-2.el7_9                              @ewp_os_rhel7_6           5.1 M
+ NetworkManager-team                                      x86_64           1:1.18.8-2.el7_9                              @ewp_os_rhel7_6            40 k
+ NetworkManager-tui                                       x86_64           1:1.18.8-2.el7_9                              @ewp_os_rhel7_6           648 k
+ Red_Hat_Enterprise_Linux-Release_Notes-7-en-US           noarch           7-2.el7                                       @anaconda/7.7             317 k
+ alsa-tools-firmware                                      x86_64           1.1.0-1.el7                                   @anaconda/7.7              84 k
+ compat-libtiff3                                          x86_64           3.9.4-12.el7                                  @anaconda/7.7             421 k
+ plymouth                                                 x86_64           0.8.9-0.34.20140113.el7                       @ewp_os_rhel7_6           227 k
+ plymouth-scripts                                         x86_64           0.8.9-0.34.20140113.el7                       @ewp_os_rhel7_6            22 k
+ teamd                                                    x86_64           1.29-3.el7                                    @ewp_os_rhel7_6           276 k
+ xdg-utils                                                noarch           1.1.0-0.17.20120809git.el7                    @anaconda/7.7             271 k
+
+Transaction Summary
+=========================================================================================================================================================
+Remove  31 Packages (+10 Dependent packages)
+
+Installed size: 57 M
+Is this ok [y/N]: y
+Is this ok [y/N]: y
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Erasing    : pam-1.1.8-23.el7.i686                                                                                                                1/41 
+  Erasing    : libselinux-2.5-15.el7.i686                                                                                                           2/41 
+  Erasing    : pcre-8.32-17.el7.i686                                                                                                                3/41 
+  Erasing    : alsa-firmware-1.0.28-2.el7.noarch                                                                                                    4/41 
+  Erasing    : alsa-tools-firmware-1.1.0-1.el7.x86_64                                                                                               5/41 
+  Erasing    : 1:NetworkManager-team-1.18.8-2.el7_9.x86_64                                                                                          6/41 
+  Erasing    : libstdc++-4.8.5-44.el7.i686                                                                                                          7/41 
+  Erasing    : audit-libs-2.8.5-4.el7.i686                                                                                                          8/41 
+  Erasing    : cracklib-2.9.0-11.el7.i686                                                                                                           9/41 
+  Erasing    : teamd-1.29-3.el7.x86_64                                                                                                             10/41 
+  Erasing    : libteam-1.29-3.el7.x86_64                                                                                                           11/41 
+  Erasing    : compat-libtiff3-3.9.4-12.el7.x86_64                                                                                                 12/41 
+  Erasing    : 1:sg3_utils-1.37-19.el7.x86_64                                                                                                      13/41 
+  Erasing    : zlib-1.2.7-19.el7_9.i686                                                                                                            14/41 
+  Erasing    : libcap-ng-0.7.5-4.el7.i686                                                                                                          15/41 
+  Erasing    : libsepol-2.5-10.el7.i686                                                                                                            16/41 
+  Erasing    : libdb-5.3.21-25.el7.i686                                                                                                            17/41 
+  Erasing    : plymouth-0.8.9-0.34.20140113.el7.x86_64                                                                                             18/41 
+  Erasing    : plymouth-scripts-0.8.9-0.34.20140113.el7.x86_64                                                                                     19/41 
+  Erasing    : Red_Hat_Enterprise_Linux-Release_Notes-7-en-US-7-2.el7.noarch                                                                       20/41 
+  Erasing    : 1:NetworkManager-tui-1.18.8-2.el7_9.x86_64                                                                                          21/41 
+  Erasing    : xdg-utils-1.1.0-0.17.20120809git.el7.noarch                                                                                         22/41 
+  Erasing    : desktop-file-utils-0.23-2.el7.x86_64                                                                                                23/41 
+  Erasing    : 1:NetworkManager-1.18.8-2.el7_9.x86_64                                                                                              24/41 
+  Erasing    : 1:wpa_supplicant-2.6-12.el7.x86_64                                                                                                  25/41 
+  Erasing    : plymouth-core-libs-0.8.9-0.34.20140113.el7.x86_64                                                                                   26/41 
+  Erasing    : 1:sg3_utils-libs-1.37-19.el7.x86_64                                                                                                 27/41 
+  Erasing    : libjpeg-turbo-1.2.90-8.el7.x86_64                                                                                                   28/41 
+  Erasing    : libnl3-cli-3.2.28-4.el7.x86_64                                                                                                      29/41 
+  Erasing    : libdaemon-0.14-7.el7.x86_64                                                                                                         30/41 
+  Erasing    : jansson-2.10-1.el7.x86_64                                                                                                           31/41 
+  Erasing    : fxload-2002_04_11-16.el7.x86_64                                                                                                     32/41 
+  Erasing    : alsa-lib-1.1.8-1.el7.x86_64                                                                                                         33/41 
+  Erasing    : compat-exiv2-023-0.23-2.el7.x86_64                                                                                                  34/41 
+  Erasing    : screen-4.1.0-0.27.20120314git3c2946.el7_9.x86_64                                                                                    35/41 
+  Erasing    : libpng12-1.2.50-10.el7.x86_64                                                                                                       36/41 
+  Erasing    : btrfs-progs-4.9.1-1.el7.x86_64                                                                                                      37/41 
+  Erasing    : nss-softokn-freebl-3.53.1-6.el7_9.i686                                                                                              38/41 
+  Erasing    : glibc-2.17-323.el7_9.i686                                                                                                           39/41 
+  Erasing    : libgcc-4.8.5-44.el7.i686                                                                                                            40/41 
+  Erasing    : 1:emacs-filesystem-24.3-23.el7.noarch                                                                                               41/41 
+  Verifying  : fxload-2002_04_11-16.el7.x86_64                                                                                                      1/41 
+  Verifying  : 1:sg3_utils-1.37-19.el7.x86_64                                                                                                       2/41 
+  Verifying  : alsa-tools-firmware-1.1.0-1.el7.x86_64                                                                                               3/41 
+  Verifying  : libnl3-cli-3.2.28-4.el7.x86_64                                                                                                       4/41 
+  Verifying  : libselinux-2.5-15.el7.i686                                                                                                           5/41 
+  Verifying  : Red_Hat_Enterprise_Linux-Release_Notes-7-en-US-7-2.el7.noarch                                                                        6/41 
+  Verifying  : pam-1.1.8-23.el7.i686                                                                                                                7/41 
+  Verifying  : xdg-utils-1.1.0-0.17.20120809git.el7.noarch                                                                                          8/41 
+  Verifying  : libdb-5.3.21-25.el7.i686                                                                                                             9/41 
+  Verifying  : 1:wpa_supplicant-2.6-12.el7.x86_64                                                                                                  10/41 
+  Verifying  : desktop-file-utils-0.23-2.el7.x86_64                                                                                                11/41 
+  Verifying  : libdaemon-0.14-7.el7.x86_64                                                                                                         12/41 
+  Verifying  : 1:NetworkManager-team-1.18.8-2.el7_9.x86_64                                                                                         13/41 
+  Verifying  : alsa-lib-1.1.8-1.el7.x86_64                                                                                                         14/41 
+  Verifying  : libgcc-4.8.5-44.el7.i686                                                                                                            15/41 
+  Verifying  : btrfs-progs-4.9.1-1.el7.x86_64                                                                                                      16/41 
+  Verifying  : plymouth-scripts-0.8.9-0.34.20140113.el7.x86_64                                                                                     17/41 
+  Verifying  : cracklib-2.9.0-11.el7.i686                                                                                                          18/41 
+  Verifying  : 1:NetworkManager-tui-1.18.8-2.el7_9.x86_64                                                                                          19/41 
+  Verifying  : 1:sg3_utils-libs-1.37-19.el7.x86_64                                                                                                 20/41 
+  Verifying  : compat-libtiff3-3.9.4-12.el7.x86_64                                                                                                 21/41 
+  Verifying  : libpng12-1.2.50-10.el7.x86_64                                                                                                       22/41 
+  Verifying  : pcre-8.32-17.el7.i686                                                                                                               23/41 
+  Verifying  : plymouth-core-libs-0.8.9-0.34.20140113.el7.x86_64                                                                                   24/41 
+  Verifying  : plymouth-0.8.9-0.34.20140113.el7.x86_64                                                                                             25/41 
+  Verifying  : libjpeg-turbo-1.2.90-8.el7.x86_64                                                                                                   26/41 
+  Verifying  : 1:NetworkManager-1.18.8-2.el7_9.x86_64                                                                                              27/41 
+  Verifying  : libteam-1.29-3.el7.x86_64                                                                                                           28/41 
+  Verifying  : screen-4.1.0-0.27.20120314git3c2946.el7_9.x86_64                                                                                    29/41 
+  Verifying  : libcap-ng-0.7.5-4.el7.i686                                                                                                          30/41 
+  Verifying  : audit-libs-2.8.5-4.el7.i686                                                                                                         31/41 
+  Verifying  : libsepol-2.5-10.el7.i686                                                                                                            32/41 
+  Verifying  : glibc-2.17-323.el7_9.i686                                                                                                           33/41 
+  Verifying  : libstdc++-4.8.5-44.el7.i686                                                                                                         34/41 
+  Verifying  : jansson-2.10-1.el7.x86_64                                                                                                           35/41 
+  Verifying  : zlib-1.2.7-19.el7_9.i686                                                                                                            36/41 
+  Verifying  : 1:emacs-filesystem-24.3-23.el7.noarch                                                                                               37/41 
+  Verifying  : teamd-1.29-3.el7.x86_64                                                                                                             38/41 
+  Verifying  : alsa-firmware-1.0.28-2.el7.noarch                                                                                                   39/41 
+  Verifying  : nss-softokn-freebl-3.53.1-6.el7_9.i686                                                                                              40/41 
+  Verifying  : compat-exiv2-023-0.23-2.el7.x86_64                                                                                                  41/41 
+
+Removed:
+  alsa-firmware.noarch 0:1.0.28-2.el7       alsa-lib.x86_64 0:1.1.8-1.el7                          audit-libs.i686 0:2.8.5-4.el7                        
+  btrfs-progs.x86_64 0:4.9.1-1.el7          compat-exiv2-023.x86_64 0:0.23-2.el7                   cracklib.i686 0:2.9.0-11.el7                         
+  desktop-file-utils.x86_64 0:0.23-2.el7    emacs-filesystem.noarch 1:24.3-23.el7                  fxload.x86_64 0:2002_04_11-16.el7                    
+  glibc.i686 0:2.17-323.el7_9               jansson.x86_64 0:2.10-1.el7                            libcap-ng.i686 0:0.7.5-4.el7                         
+  libdaemon.x86_64 0:0.14-7.el7             libdb.i686 0:5.3.21-25.el7                             libgcc.i686 0:4.8.5-44.el7                           
+  libjpeg-turbo.x86_64 0:1.2.90-8.el7       libnl3-cli.x86_64 0:3.2.28-4.el7                       libpng12.x86_64 0:1.2.50-10.el7                      
+  libselinux.i686 0:2.5-15.el7              libsepol.i686 0:2.5-10.el7                             libstdc++.i686 0:4.8.5-44.el7                        
+  libteam.x86_64 0:1.29-3.el7               nss-softokn-freebl.i686 0:3.53.1-6.el7_9               pam.i686 0:1.1.8-23.el7                              
+  pcre.i686 0:8.32-17.el7                   plymouth-core-libs.x86_64 0:0.8.9-0.34.20140113.el7    screen.x86_64 0:4.1.0-0.27.20120314git3c2946.el7_9   
+  sg3_utils.x86_64 1:1.37-19.el7            sg3_utils-libs.x86_64 1:1.37-19.el7                    wpa_supplicant.x86_64 1:2.6-12.el7                   
+  zlib.i686 0:1.2.7-19.el7_9               
+
+Dependency Removed:
+  NetworkManager.x86_64 1:1.18.8-2.el7_9                           NetworkManager-team.x86_64 1:1.18.8-2.el7_9                                          
+  NetworkManager-tui.x86_64 1:1.18.8-2.el7_9                       Red_Hat_Enterprise_Linux-Release_Notes-7-en-US.noarch 0:7-2.el7                      
+  alsa-tools-firmware.x86_64 0:1.1.0-1.el7                         compat-libtiff3.x86_64 0:3.9.4-12.el7                                                
+  plymouth.x86_64 0:0.8.9-0.34.20140113.el7                        plymouth-scripts.x86_64 0:0.8.9-0.34.20140113.el7                                    
+  teamd.x86_64 0:1.29-3.el7                                        xdg-utils.noarch 0:1.1.0-0.17.20120809git.el7                                        
+
+Complete!
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo yum -y update --disablerepo "*" --enablerepo "ewp_os_rhel7_11"
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Resolving Dependencies
+--> Running transaction check
+---> Package bind-export-libs.x86_64 32:9.11.4-26.P2.el7_9.4 will be updated
+---> Package bind-export-libs.x86_64 32:9.11.4-26.P2.el7_9.5 will be an update
+---> Package bind-libs.x86_64 32:9.11.4-26.P2.el7_9.4 will be updated
+---> Package bind-libs.x86_64 32:9.11.4-26.P2.el7_9.5 will be an update
+---> Package bind-libs-lite.x86_64 32:9.11.4-26.P2.el7_9.4 will be updated
+---> Package bind-libs-lite.x86_64 32:9.11.4-26.P2.el7_9.5 will be an update
+---> Package bind-license.noarch 32:9.11.4-26.P2.el7_9.4 will be updated
+---> Package bind-license.noarch 32:9.11.4-26.P2.el7_9.5 will be an update
+---> Package bind-utils.x86_64 32:9.11.4-26.P2.el7_9.4 will be updated
+---> Package bind-utils.x86_64 32:9.11.4-26.P2.el7_9.5 will be an update
+---> Package device-mapper.x86_64 7:1.02.170-6.el7_9.3 will be updated
+---> Package device-mapper.x86_64 7:1.02.170-6.el7_9.5 will be an update
+---> Package device-mapper-event.x86_64 7:1.02.170-6.el7_9.3 will be updated
+---> Package device-mapper-event.x86_64 7:1.02.170-6.el7_9.5 will be an update
+---> Package device-mapper-event-libs.x86_64 7:1.02.170-6.el7_9.3 will be updated
+---> Package device-mapper-event-libs.x86_64 7:1.02.170-6.el7_9.5 will be an update
+---> Package device-mapper-libs.x86_64 7:1.02.170-6.el7_9.3 will be updated
+---> Package device-mapper-libs.x86_64 7:1.02.170-6.el7_9.5 will be an update
+---> Package dhclient.x86_64 12:4.2.5-82.el7 will be updated
+---> Package dhclient.x86_64 12:4.2.5-83.el7_9.1 will be an update
+---> Package dhcp-common.x86_64 12:4.2.5-82.el7 will be updated
+---> Package dhcp-common.x86_64 12:4.2.5-83.el7_9.1 will be an update
+---> Package dhcp-libs.x86_64 12:4.2.5-82.el7 will be updated
+---> Package dhcp-libs.x86_64 12:4.2.5-83.el7_9.1 will be an update
+---> Package dmidecode.x86_64 1:3.2-5.el7 will be updated
+---> Package dmidecode.x86_64 1:3.2-5.el7_9.1 will be an update
+---> Package firewalld.noarch 0:0.6.3-12.el7 will be updated
+---> Package firewalld.noarch 0:0.6.3-13.el7_9 will be an update
+---> Package firewalld-filesystem.noarch 0:0.6.3-12.el7 will be updated
+---> Package firewalld-filesystem.noarch 0:0.6.3-13.el7_9 will be an update
+---> Package glib2.x86_64 0:2.56.1-8.el7 will be updated
+---> Package glib2.x86_64 0:2.56.1-9.el7_9 will be an update
+---> Package glibc.x86_64 0:2.17-323.el7_9 will be updated
+---> Package glibc.x86_64 0:2.17-324.el7_9 will be an update
+---> Package glibc-common.x86_64 0:2.17-323.el7_9 will be updated
+---> Package glibc-common.x86_64 0:2.17-324.el7_9 will be an update
+---> Package glibc-devel.x86_64 0:2.17-323.el7_9 will be updated
+---> Package glibc-devel.x86_64 0:2.17-324.el7_9 will be an update
+---> Package glibc-headers.x86_64 0:2.17-323.el7_9 will be updated
+---> Package glibc-headers.x86_64 0:2.17-324.el7_9 will be an update
+---> Package grub2.x86_64 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2.x86_64 1:2.02-0.87.el7_9.6 will be an update
+---> Package grub2-common.noarch 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2-common.noarch 1:2.02-0.87.el7_9.6 will be an update
+---> Package grub2-pc.x86_64 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2-pc.x86_64 1:2.02-0.87.el7_9.6 will be an update
+---> Package grub2-pc-modules.noarch 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2-pc-modules.noarch 1:2.02-0.87.el7_9.6 will be an update
+---> Package grub2-tools.x86_64 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2-tools.x86_64 1:2.02-0.87.el7_9.6 will be an update
+---> Package grub2-tools-extra.x86_64 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2-tools-extra.x86_64 1:2.02-0.87.el7_9.6 will be an update
+---> Package grub2-tools-minimal.x86_64 1:2.02-0.87.el7_9.2 will be updated
+---> Package grub2-tools-minimal.x86_64 1:2.02-0.87.el7_9.6 will be an update
+---> Package gssproxy.x86_64 0:0.7.0-29.el7 will be updated
+---> Package gssproxy.x86_64 0:0.7.0-30.el7_9 will be an update
+---> Package kernel.x86_64 0:3.10.0-1160.31.1.el7 will be installed
+---> Package kernel-devel.x86_64 0:3.10.0-1160.31.1.el7 will be installed
+---> Package kernel-headers.x86_64 0:3.10.0-1160.15.2.el7 will be updated
+---> Package kernel-headers.x86_64 0:3.10.0-1160.31.1.el7 will be an update
+---> Package kernel-tools.x86_64 0:3.10.0-1160.15.2.el7 will be updated
+---> Package kernel-tools.x86_64 0:3.10.0-1160.31.1.el7 will be an update
+---> Package kernel-tools-libs.x86_64 0:3.10.0-1160.15.2.el7 will be updated
+---> Package kernel-tools-libs.x86_64 0:3.10.0-1160.31.1.el7 will be an update
+---> Package kexec-tools.x86_64 0:2.0.15-51.el7_9.1 will be updated
+---> Package kexec-tools.x86_64 0:2.0.15-51.el7_9.3 will be an update
+---> Package lvm2.x86_64 7:2.02.187-6.el7_9.3 will be updated
+---> Package lvm2.x86_64 7:2.02.187-6.el7_9.5 will be an update
+---> Package lvm2-libs.x86_64 7:2.02.187-6.el7_9.3 will be updated
+---> Package lvm2-libs.x86_64 7:2.02.187-6.el7_9.5 will be an update
+---> Package microcode_ctl.x86_64 2:2.1-73.8.el7_9 will be updated
+---> Package microcode_ctl.x86_64 2:2.1-73.9.el7_9 will be an update
+---> Package nss.x86_64 0:3.53.1-3.el7_9 will be updated
+---> Package nss.x86_64 0:3.53.1-7.el7_9 will be an update
+---> Package nss-sysinit.x86_64 0:3.53.1-3.el7_9 will be updated
+---> Package nss-sysinit.x86_64 0:3.53.1-7.el7_9 will be an update
+---> Package nss-tools.x86_64 0:3.53.1-3.el7_9 will be updated
+---> Package nss-tools.x86_64 0:3.53.1-7.el7_9 will be an update
+---> Package open-vm-tools.x86_64 0:11.0.5-3.el7_9.1 will be updated
+---> Package open-vm-tools.x86_64 0:11.0.5-3.el7_9.3 will be an update
+---> Package openldap.x86_64 0:2.4.44-22.el7 will be updated
+---> Package openldap.x86_64 0:2.4.44-23.el7_9 will be an update
+---> Package python-firewall.noarch 0:0.6.3-12.el7 will be updated
+---> Package python-firewall.noarch 0:0.6.3-13.el7_9 will be an update
+---> Package python-perf.x86_64 0:3.10.0-1160.15.2.el7 will be updated
+---> Package python-perf.x86_64 0:3.10.0-1160.31.1.el7 will be an update
+---> Package python-syspurpose.x86_64 0:1.24.45-1.el7_9 will be updated
+---> Package python-syspurpose.x86_64 0:1.24.48-1.el7_9 will be an update
+---> Package redhat-release-server.x86_64 0:7.9-5.el7_9 will be updated
+---> Package redhat-release-server.x86_64 0:7.9-6.el7_9 will be an update
+---> Package sos.noarch 0:3.9-5.el7_9.2 will be updated
+---> Package sos.noarch 0:3.9-5.el7_9.4 will be an update
+---> Package subscription-manager.x86_64 0:1.24.45-1.el7_9 will be updated
+---> Package subscription-manager.x86_64 0:1.24.48-1.el7_9 will be an update
+---> Package subscription-manager-rhsm.x86_64 0:1.24.45-1.el7_9 will be updated
+---> Package subscription-manager-rhsm.x86_64 0:1.24.48-1.el7_9 will be an update
+---> Package subscription-manager-rhsm-certificates.x86_64 0:1.24.45-1.el7_9 will be updated
+---> Package subscription-manager-rhsm-certificates.x86_64 0:1.24.48-1.el7_9 will be an update
+---> Package unzip.x86_64 0:6.0-20.el7 will be updated
+---> Package unzip.x86_64 0:6.0-22.el7_9 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=========================================================================================================================================================
+ Package                                               Arch                  Version                                Repository                      Size
+=========================================================================================================================================================
+Installing:
+ kernel                                                x86_64                3.10.0-1160.31.1.el7                   ewp_os_rhel7_11                 50 M
+ kernel-devel                                          x86_64                3.10.0-1160.31.1.el7                   ewp_os_rhel7_11                 18 M
+Updating:
+ bind-export-libs                                      x86_64                32:9.11.4-26.P2.el7_9.5                ewp_os_rhel7_11                1.1 M
+ bind-libs                                             x86_64                32:9.11.4-26.P2.el7_9.5                ewp_os_rhel7_11                157 k
+ bind-libs-lite                                        x86_64                32:9.11.4-26.P2.el7_9.5                ewp_os_rhel7_11                1.1 M
+ bind-license                                          noarch                32:9.11.4-26.P2.el7_9.5                ewp_os_rhel7_11                 91 k
+ bind-utils                                            x86_64                32:9.11.4-26.P2.el7_9.5                ewp_os_rhel7_11                261 k
+ device-mapper                                         x86_64                7:1.02.170-6.el7_9.5                   ewp_os_rhel7_11                297 k
+ device-mapper-event                                   x86_64                7:1.02.170-6.el7_9.5                   ewp_os_rhel7_11                192 k
+ device-mapper-event-libs                              x86_64                7:1.02.170-6.el7_9.5                   ewp_os_rhel7_11                192 k
+ device-mapper-libs                                    x86_64                7:1.02.170-6.el7_9.5                   ewp_os_rhel7_11                325 k
+ dhclient                                              x86_64                12:4.2.5-83.el7_9.1                    ewp_os_rhel7_11                286 k
+ dhcp-common                                           x86_64                12:4.2.5-83.el7_9.1                    ewp_os_rhel7_11                176 k
+ dhcp-libs                                             x86_64                12:4.2.5-83.el7_9.1                    ewp_os_rhel7_11                133 k
+ dmidecode                                             x86_64                1:3.2-5.el7_9.1                        ewp_os_rhel7_11                 82 k
+ firewalld                                             noarch                0.6.3-13.el7_9                         ewp_os_rhel7_11                449 k
+ firewalld-filesystem                                  noarch                0.6.3-13.el7_9                         ewp_os_rhel7_11                 51 k
+ glib2                                                 x86_64                2.56.1-9.el7_9                         ewp_os_rhel7_11                2.5 M
+ glibc                                                 x86_64                2.17-324.el7_9                         ewp_os_rhel7_11                3.6 M
+ glibc-common                                          x86_64                2.17-324.el7_9                         ewp_os_rhel7_11                 12 M
+ glibc-devel                                           x86_64                2.17-324.el7_9                         ewp_os_rhel7_11                1.1 M
+ glibc-headers                                         x86_64                2.17-324.el7_9                         ewp_os_rhel7_11                691 k
+ grub2                                                 x86_64                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                 34 k
+ grub2-common                                          noarch                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                732 k
+ grub2-pc                                              x86_64                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                 34 k
+ grub2-pc-modules                                      noarch                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                858 k
+ grub2-tools                                           x86_64                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                1.8 M
+ grub2-tools-extra                                     x86_64                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                1.0 M
+ grub2-tools-minimal                                   x86_64                1:2.02-0.87.el7_9.6                    ewp_os_rhel7_11                177 k
+ gssproxy                                              x86_64                0.7.0-30.el7_9                         ewp_os_rhel7_11                111 k
+ kernel-headers                                        x86_64                3.10.0-1160.31.1.el7                   ewp_os_rhel7_11                9.0 M
+ kernel-tools                                          x86_64                3.10.0-1160.31.1.el7                   ewp_os_rhel7_11                8.1 M
+ kernel-tools-libs                                     x86_64                3.10.0-1160.31.1.el7                   ewp_os_rhel7_11                8.0 M
+ kexec-tools                                           x86_64                2.0.15-51.el7_9.3                      ewp_os_rhel7_11                351 k
+ lvm2                                                  x86_64                7:2.02.187-6.el7_9.5                   ewp_os_rhel7_11                1.3 M
+ lvm2-libs                                             x86_64                7:2.02.187-6.el7_9.5                   ewp_os_rhel7_11                1.1 M
+ microcode_ctl                                         x86_64                2:2.1-73.9.el7_9                       ewp_os_rhel7_11                4.2 M
+ nss                                                   x86_64                3.53.1-7.el7_9                         ewp_os_rhel7_11                869 k
+ nss-sysinit                                           x86_64                3.53.1-7.el7_9                         ewp_os_rhel7_11                 66 k
+ nss-tools                                             x86_64                3.53.1-7.el7_9                         ewp_os_rhel7_11                535 k
+ open-vm-tools                                         x86_64                11.0.5-3.el7_9.3                       ewp_os_rhel7_11                676 k
+ openldap                                              x86_64                2.4.44-23.el7_9                        ewp_os_rhel7_11                356 k
+ python-firewall                                       noarch                0.6.3-13.el7_9                         ewp_os_rhel7_11                355 k
+ python-perf                                           x86_64                3.10.0-1160.31.1.el7                   ewp_os_rhel7_11                8.1 M
+ python-syspurpose                                     x86_64                1.24.48-1.el7_9                        ewp_os_rhel7_11                274 k
+ redhat-release-server                                 x86_64                7.9-6.el7_9                            ewp_os_rhel7_11                 30 k
+ sos                                                   noarch                3.9-5.el7_9.4                          ewp_os_rhel7_11                541 k
+ subscription-manager                                  x86_64                1.24.48-1.el7_9                        ewp_os_rhel7_11                1.1 M
+ subscription-manager-rhsm                             x86_64                1.24.48-1.el7_9                        ewp_os_rhel7_11                333 k
+ subscription-manager-rhsm-certificates                x86_64                1.24.48-1.el7_9                        ewp_os_rhel7_11                241 k
+ unzip                                                 x86_64                6.0-22.el7_9                           ewp_os_rhel7_11                171 k
+
+Transaction Summary
+=========================================================================================================================================================
+Install   2 Packages
+Upgrade  49 Packages
+
+Total download size: 143 M
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/51): bind-libs-9.11.4-26.P2.el7_9.5.x86_64.rpm                                                                                 | 157 kB  00:00:00     
+(2/51): bind-export-libs-9.11.4-26.P2.el7_9.5.x86_64.rpm                                                                          | 1.1 MB  00:00:00     
+(3/51): bind-license-9.11.4-26.P2.el7_9.5.noarch.rpm                                                                              |  91 kB  00:00:00     
+(4/51): bind-libs-lite-9.11.4-26.P2.el7_9.5.x86_64.rpm                                                                            | 1.1 MB  00:00:00     
+(5/51): bind-utils-9.11.4-26.P2.el7_9.5.x86_64.rpm                                                                                | 261 kB  00:00:00     
+(6/51): device-mapper-event-1.02.170-6.el7_9.5.x86_64.rpm                                                                         | 192 kB  00:00:00     
+(7/51): device-mapper-1.02.170-6.el7_9.5.x86_64.rpm                                                                               | 297 kB  00:00:00     
+(8/51): device-mapper-event-libs-1.02.170-6.el7_9.5.x86_64.rpm                                                                    | 192 kB  00:00:00     
+(9/51): dhclient-4.2.5-83.el7_9.1.x86_64.rpm                                                                                      | 286 kB  00:00:00     
+(10/51): device-mapper-libs-1.02.170-6.el7_9.5.x86_64.rpm                                                                         | 325 kB  00:00:00     
+(11/51): dhcp-common-4.2.5-83.el7_9.1.x86_64.rpm                                                                                  | 176 kB  00:00:00     
+(12/51): dhcp-libs-4.2.5-83.el7_9.1.x86_64.rpm                                                                                    | 133 kB  00:00:00     
+(13/51): dmidecode-3.2-5.el7_9.1.x86_64.rpm                                                                                       |  82 kB  00:00:00     
+(14/51): firewalld-filesystem-0.6.3-13.el7_9.noarch.rpm                                                                           |  51 kB  00:00:00     
+(15/51): firewalld-0.6.3-13.el7_9.noarch.rpm                                                                                      | 449 kB  00:00:00     
+(16/51): glib2-2.56.1-9.el7_9.x86_64.rpm                                                                                          | 2.5 MB  00:00:00     
+(17/51): glibc-common-2.17-324.el7_9.x86_64.rpm                                                                                   |  12 MB  00:00:00     
+(18/51): glibc-devel-2.17-324.el7_9.x86_64.rpm                                                                                    | 1.1 MB  00:00:00     
+(19/51): glibc-headers-2.17-324.el7_9.x86_64.rpm                                                                                  | 691 kB  00:00:00     
+(20/51): grub2-2.02-0.87.el7_9.6.x86_64.rpm                                                                                       |  34 kB  00:00:00     
+(21/51): grub2-common-2.02-0.87.el7_9.6.noarch.rpm                                                                                | 732 kB  00:00:00     
+(22/51): grub2-pc-2.02-0.87.el7_9.6.x86_64.rpm                                                                                    |  34 kB  00:00:00     
+(23/51): grub2-pc-modules-2.02-0.87.el7_9.6.noarch.rpm                                                                            | 858 kB  00:00:00     
+(24/51): glibc-2.17-324.el7_9.x86_64.rpm                                                                                          | 3.6 MB  00:00:01     
+(25/51): grub2-tools-2.02-0.87.el7_9.6.x86_64.rpm                                                                                 | 1.8 MB  00:00:00     
+(26/51): grub2-tools-minimal-2.02-0.87.el7_9.6.x86_64.rpm                                                                         | 177 kB  00:00:00     
+(27/51): gssproxy-0.7.0-30.el7_9.x86_64.rpm                                                                                       | 111 kB  00:00:00     
+(28/51): grub2-tools-extra-2.02-0.87.el7_9.6.x86_64.rpm                                                                           | 1.0 MB  00:00:00     
+(29/51): kernel-3.10.0-1160.31.1.el7.x86_64.rpm                                                                                   |  50 MB  00:00:02     
+(30/51): kernel-headers-3.10.0-1160.31.1.el7.x86_64.rpm                                                                           | 9.0 MB  00:00:00     
+(31/51): kernel-tools-3.10.0-1160.31.1.el7.x86_64.rpm                                                                             | 8.1 MB  00:00:00     
+(32/51): kernel-tools-libs-3.10.0-1160.31.1.el7.x86_64.rpm                                                                        | 8.0 MB  00:00:00     
+(33/51): kexec-tools-2.0.15-51.el7_9.3.x86_64.rpm                                                                                 | 351 kB  00:00:00     
+(34/51): lvm2-2.02.187-6.el7_9.5.x86_64.rpm                                                                                       | 1.3 MB  00:00:00     
+(35/51): lvm2-libs-2.02.187-6.el7_9.5.x86_64.rpm                                                                                  | 1.1 MB  00:00:00     
+(36/51): microcode_ctl-2.1-73.9.el7_9.x86_64.rpm                                                                                  | 4.2 MB  00:00:00     
+(37/51): nss-3.53.1-7.el7_9.x86_64.rpm                                                                                            | 869 kB  00:00:00     
+(38/51): nss-sysinit-3.53.1-7.el7_9.x86_64.rpm                                                                                    |  66 kB  00:00:00     
+(39/51): nss-tools-3.53.1-7.el7_9.x86_64.rpm                                                                                      | 535 kB  00:00:00     
+(40/51): open-vm-tools-11.0.5-3.el7_9.3.x86_64.rpm                                                                                | 676 kB  00:00:00     
+(41/51): openldap-2.4.44-23.el7_9.x86_64.rpm                                                                                      | 356 kB  00:00:00     
+(42/51): python-firewall-0.6.3-13.el7_9.noarch.rpm                                                                                | 355 kB  00:00:00     
+(43/51): kernel-devel-3.10.0-1160.31.1.el7.x86_64.rpm                                                                             |  18 MB  00:00:04     
+(44/51): python-syspurpose-1.24.48-1.el7_9.x86_64.rpm                                                                             | 274 kB  00:00:00     
+(45/51): redhat-release-server-7.9-6.el7_9.x86_64.rpm                                                                             |  30 kB  00:00:00     
+(46/51): sos-3.9-5.el7_9.4.noarch.rpm                                                                                             | 541 kB  00:00:00     
+(47/51): python-perf-3.10.0-1160.31.1.el7.x86_64.rpm                                                                              | 8.1 MB  00:00:00     
+(48/51): subscription-manager-1.24.48-1.el7_9.x86_64.rpm                                                                          | 1.1 MB  00:00:00     
+(49/51): subscription-manager-rhsm-1.24.48-1.el7_9.x86_64.rpm                                                                     | 333 kB  00:00:00     
+(50/51): unzip-6.0-22.el7_9.x86_64.rpm                                                                                            | 171 kB  00:00:00     
+(51/51): subscription-manager-rhsm-certificates-1.24.48-1.el7_9.x86_64.rpm                                                        | 241 kB  00:00:00     
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                     20 MB/s | 143 MB  00:00:07     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 1:grub2-common-2.02-0.87.el7_9.6.noarch                                                                                             1/100 
+  Updating   : 32:bind-license-9.11.4-26.P2.el7_9.5.noarch                                                                                         2/100 
+  Updating   : 1:grub2-pc-modules-2.02-0.87.el7_9.6.noarch                                                                                         3/100 
+  Updating   : glibc-2.17-324.el7_9.x86_64                                                                                                         4/100 
+  Updating   : glibc-common-2.17-324.el7_9.x86_64                                                                                                  5/100 
+  Updating   : nss-3.53.1-7.el7_9.x86_64                                                                                                           6/100 
+  Updating   : nss-sysinit-3.53.1-7.el7_9.x86_64                                                                                                   7/100 
+  Updating   : 7:device-mapper-1.02.170-6.el7_9.5.x86_64                                                                                           8/100 
+  Updating   : 7:device-mapper-libs-1.02.170-6.el7_9.5.x86_64                                                                                      9/100 
+  Updating   : 1:grub2-tools-minimal-2.02-0.87.el7_9.6.x86_64                                                                                     10/100 
+  Updating   : 7:device-mapper-event-libs-1.02.170-6.el7_9.5.x86_64                                                                               11/100 
+  Updating   : 1:grub2-tools-2.02-0.87.el7_9.6.x86_64                                                                                             12/100 
+  Updating   : glib2-2.56.1-9.el7_9.x86_64                                                                                                        13/100 
+  Updating   : 32:bind-libs-lite-9.11.4-26.P2.el7_9.5.x86_64                                                                                      14/100 
+  Updating   : 32:bind-libs-9.11.4-26.P2.el7_9.5.x86_64                                                                                           15/100 
+  Updating   : 1:grub2-tools-extra-2.02-0.87.el7_9.6.x86_64                                                                                       16/100 
+  Updating   : 1:grub2-pc-2.02-0.87.el7_9.6.x86_64                                                                                                17/100 
+  Updating   : 7:device-mapper-event-1.02.170-6.el7_9.5.x86_64                                                                                    18/100 
+  Updating   : 7:lvm2-libs-2.02.187-6.el7_9.5.x86_64                                                                                              19/100 
+  Updating   : nss-tools-3.53.1-7.el7_9.x86_64                                                                                                    20/100 
+  Updating   : openldap-2.4.44-23.el7_9.x86_64                                                                                                    21/100 
+  Updating   : 12:dhcp-libs-4.2.5-83.el7_9.1.x86_64                                                                                               22/100 
+  Updating   : 12:dhcp-common-4.2.5-83.el7_9.1.x86_64                                                                                             23/100 
+  Updating   : 32:bind-export-libs-9.11.4-26.P2.el7_9.5.x86_64                                                                                    24/100 
+  Updating   : kernel-tools-libs-3.10.0-1160.31.1.el7.x86_64                                                                                      25/100 
+  Updating   : kernel-headers-3.10.0-1160.31.1.el7.x86_64                                                                                         26/100 
+  Updating   : glibc-headers-2.17-324.el7_9.x86_64                                                                                                27/100 
+  Updating   : python-syspurpose-1.24.48-1.el7_9.x86_64                                                                                           28/100 
+  Updating   : python-firewall-0.6.3-13.el7_9.noarch                                                                                              29/100 
+  Updating   : redhat-release-server-7.9-6.el7_9.x86_64                                                                                           30/100 
+  Updating   : firewalld-filesystem-0.6.3-13.el7_9.noarch                                                                                         31/100 
+  Updating   : subscription-manager-rhsm-certificates-1.24.48-1.el7_9.x86_64                                                                      32/100 
+  Updating   : subscription-manager-rhsm-1.24.48-1.el7_9.x86_64                                                                                   33/100 
+  Updating   : subscription-manager-1.24.48-1.el7_9.x86_64                                                                                        34/100 
+  Updating   : firewalld-0.6.3-13.el7_9.noarch                                                                                                    35/100 
+  Installing : kernel-3.10.0-1160.31.1.el7.x86_64                                                                                                 36/100 
+  Updating   : glibc-devel-2.17-324.el7_9.x86_64                                                                                                  37/100 
+  Updating   : kernel-tools-3.10.0-1160.31.1.el7.x86_64                                                                                           38/100 
+  Updating   : 12:dhclient-4.2.5-83.el7_9.1.x86_64                                                                                                39/100 
+  Updating   : 7:lvm2-2.02.187-6.el7_9.5.x86_64                                                                                                   40/100 
+  Updating   : 1:grub2-2.02-0.87.el7_9.6.x86_64                                                                                                   41/100 
+  Updating   : 32:bind-utils-9.11.4-26.P2.el7_9.5.x86_64                                                                                          42/100 
+  Updating   : open-vm-tools-11.0.5-3.el7_9.3.x86_64                                                                                              43/100 
+  Updating   : 2:microcode_ctl-2.1-73.9.el7_9.x86_64                                                                                              44/100 
+  Updating   : 1:dmidecode-3.2-5.el7_9.1.x86_64                                                                                                   45/100 
+  Updating   : gssproxy-0.7.0-30.el7_9.x86_64                                                                                                     46/100 
+  Updating   : kexec-tools-2.0.15-51.el7_9.3.x86_64                                                                                               47/100 
+  Updating   : unzip-6.0-22.el7_9.x86_64                                                                                                          48/100 
+  Updating   : python-perf-3.10.0-1160.31.1.el7.x86_64                                                                                            49/100 
+  Installing : kernel-devel-3.10.0-1160.31.1.el7.x86_64                                                                                           50/100 
+  Updating   : sos-3.9-5.el7_9.4.noarch                                                                                                           51/100 
+  Cleanup    : 12:dhclient-4.2.5-82.el7.x86_64                                                                                                    52/100 
+  Cleanup    : glibc-devel-2.17-323.el7_9.x86_64                                                                                                  53/100 
+  Cleanup    : glibc-headers-2.17-323.el7_9.x86_64                                                                                                54/100 
+  Cleanup    : firewalld-0.6.3-12.el7.noarch                                                                                                      55/100 
+  Cleanup    : 7:lvm2-2.02.187-6.el7_9.3.x86_64                                                                                                   56/100 
+  Cleanup    : 12:dhcp-common-4.2.5-82.el7.x86_64                                                                                                 57/100 
+  Cleanup    : 12:dhcp-libs-4.2.5-82.el7.x86_64                                                                                                   58/100 
+  Cleanup    : 1:grub2-2.02-0.87.el7_9.2.x86_64                                                                                                   59/100 
+  Cleanup    : 1:grub2-pc-2.02-0.87.el7_9.2.x86_64                                                                                                60/100 
+  Cleanup    : 1:grub2-pc-modules-2.02-0.87.el7_9.2.noarch                                                                                        61/100 
+  Cleanup    : 2:microcode_ctl-2.1-73.8.el7_9.x86_64                                                                                              62/100 
+  Cleanup    : firewalld-filesystem-0.6.3-12.el7.noarch                                                                                           63/100 
+  Cleanup    : python-firewall-0.6.3-12.el7.noarch                                                                                                64/100 
+  Cleanup    : kernel-headers-3.10.0-1160.15.2.el7.x86_64                                                                                         65/100 
+  Cleanup    : sos-3.9-5.el7_9.2.noarch                                                                                                           66/100 
+  Cleanup    : redhat-release-server-7.9-5.el7_9.x86_64                                                                                           67/100 
+  Cleanup    : 32:bind-utils-9.11.4-26.P2.el7_9.4.x86_64                                                                                          68/100 
+  Cleanup    : 1:grub2-tools-extra-2.02-0.87.el7_9.2.x86_64                                                                                       69/100 
+  Cleanup    : openldap-2.4.44-22.el7.x86_64                                                                                                      70/100 
+  Cleanup    : 7:lvm2-libs-2.02.187-6.el7_9.3.x86_64                                                                                              71/100 
+  Cleanup    : 7:device-mapper-event-1.02.170-6.el7_9.3.x86_64                                                                                    72/100 
+  Cleanup    : nss-tools-3.53.1-3.el7_9.x86_64                                                                                                    73/100 
+  Cleanup    : 1:grub2-tools-2.02-0.87.el7_9.2.x86_64                                                                                             74/100 
+  Cleanup    : 32:bind-libs-9.11.4-26.P2.el7_9.4.x86_64                                                                                           75/100 
+  Cleanup    : subscription-manager-1.24.45-1.el7_9.x86_64                                                                                        76/100 
+  Cleanup    : 1:grub2-tools-minimal-2.02-0.87.el7_9.2.x86_64                                                                                     77/100 
+  Cleanup    : kernel-tools-3.10.0-1160.15.2.el7.x86_64                                                                                           78/100 
+  Cleanup    : nss-sysinit-3.53.1-3.el7_9.x86_64                                                                                                  79/100 
+  Cleanup    : nss-3.53.1-3.el7_9.x86_64                                                                                                          80/100 
+  Cleanup    : 7:device-mapper-event-libs-1.02.170-6.el7_9.3.x86_64                                                                               81/100 
+  Cleanup    : 7:device-mapper-1.02.170-6.el7_9.3.x86_64                                                                                          82/100 
+  Cleanup    : 7:device-mapper-libs-1.02.170-6.el7_9.3.x86_64                                                                                     83/100 
+  Cleanup    : open-vm-tools-11.0.5-3.el7_9.1.x86_64                                                                                              84/100 
+  Cleanup    : subscription-manager-rhsm-1.24.45-1.el7_9.x86_64                                                                                   85/100 
+  Cleanup    : 32:bind-libs-lite-9.11.4-26.P2.el7_9.4.x86_64                                                                                      86/100 
+  Cleanup    : glib2-2.56.1-8.el7.x86_64                                                                                                          87/100 
+  Cleanup    : kernel-tools-libs-3.10.0-1160.15.2.el7.x86_64                                                                                      88/100 
+  Cleanup    : 32:bind-export-libs-9.11.4-26.P2.el7_9.4.x86_64                                                                                    89/100 
+  Cleanup    : python-perf-3.10.0-1160.15.2.el7.x86_64                                                                                            90/100 
+  Cleanup    : unzip-6.0-20.el7.x86_64                                                                                                            91/100 
+  Cleanup    : kexec-tools-2.0.15-51.el7_9.1.x86_64                                                                                               92/100 
+  Cleanup    : gssproxy-0.7.0-29.el7.x86_64                                                                                                       93/100 
+  Cleanup    : 1:dmidecode-3.2-5.el7.x86_64                                                                                                       94/100 
+  Cleanup    : 32:bind-license-9.11.4-26.P2.el7_9.4.noarch                                                                                        95/100 
+  Cleanup    : subscription-manager-rhsm-certificates-1.24.45-1.el7_9.x86_64                                                                      96/100 
+  Cleanup    : 1:grub2-common-2.02-0.87.el7_9.2.noarch                                                                                            97/100 
+  Cleanup    : python-syspurpose-1.24.45-1.el7_9.x86_64                                                                                           98/100 
+  Cleanup    : glibc-common-2.17-323.el7_9.x86_64                                                                                                 99/100 
+  Cleanup    : glibc-2.17-323.el7_9.x86_64                                                                                                       100/100 
+  Verifying  : 7:device-mapper-event-1.02.170-6.el7_9.5.x86_64                                                                                     1/100 
+  Verifying  : subscription-manager-rhsm-certificates-1.24.48-1.el7_9.x86_64                                                                       2/100 
+  Verifying  : 32:bind-export-libs-9.11.4-26.P2.el7_9.5.x86_64                                                                                     3/100 
+  Verifying  : firewalld-filesystem-0.6.3-13.el7_9.noarch                                                                                          4/100 
+  Verifying  : glibc-common-2.17-324.el7_9.x86_64                                                                                                  5/100 
+  Verifying  : firewalld-0.6.3-13.el7_9.noarch                                                                                                     6/100 
+  Verifying  : 7:lvm2-2.02.187-6.el7_9.5.x86_64                                                                                                    7/100 
+  Verifying  : 2:microcode_ctl-2.1-73.9.el7_9.x86_64                                                                                               8/100 
+  Verifying  : 32:bind-libs-9.11.4-26.P2.el7_9.5.x86_64                                                                                            9/100 
+  Verifying  : redhat-release-server-7.9-6.el7_9.x86_64                                                                                           10/100 
+  Verifying  : 1:dmidecode-3.2-5.el7_9.1.x86_64                                                                                                   11/100 
+  Verifying  : kernel-tools-libs-3.10.0-1160.31.1.el7.x86_64                                                                                      12/100 
+  Verifying  : kernel-tools-3.10.0-1160.31.1.el7.x86_64                                                                                           13/100 
+  Verifying  : 7:device-mapper-1.02.170-6.el7_9.5.x86_64                                                                                          14/100 
+  Verifying  : nss-3.53.1-7.el7_9.x86_64                                                                                                          15/100 
+  Verifying  : 1:grub2-2.02-0.87.el7_9.6.x86_64                                                                                                   16/100 
+  Verifying  : 1:grub2-pc-2.02-0.87.el7_9.6.x86_64                                                                                                17/100 
+  Verifying  : 1:grub2-tools-2.02-0.87.el7_9.6.x86_64                                                                                             18/100 
+  Verifying  : gssproxy-0.7.0-30.el7_9.x86_64                                                                                                     19/100 
+  Verifying  : kernel-3.10.0-1160.31.1.el7.x86_64                                                                                                 20/100 
+  Verifying  : 12:dhcp-libs-4.2.5-83.el7_9.1.x86_64                                                                                               21/100 
+  Verifying  : open-vm-tools-11.0.5-3.el7_9.3.x86_64                                                                                              22/100 
+  Verifying  : subscription-manager-1.24.48-1.el7_9.x86_64                                                                                        23/100 
+  Verifying  : 1:grub2-tools-extra-2.02-0.87.el7_9.6.x86_64                                                                                       24/100 
+  Verifying  : glibc-devel-2.17-324.el7_9.x86_64                                                                                                  25/100 
+  Verifying  : 32:bind-utils-9.11.4-26.P2.el7_9.5.x86_64                                                                                          26/100 
+  Verifying  : python-firewall-0.6.3-13.el7_9.noarch                                                                                              27/100 
+  Verifying  : 7:device-mapper-libs-1.02.170-6.el7_9.5.x86_64                                                                                     28/100 
+  Verifying  : sos-3.9-5.el7_9.4.noarch                                                                                                           29/100 
+  Verifying  : 12:dhcp-common-4.2.5-83.el7_9.1.x86_64                                                                                             30/100 
+  Verifying  : openldap-2.4.44-23.el7_9.x86_64                                                                                                    31/100 
+  Verifying  : subscription-manager-rhsm-1.24.48-1.el7_9.x86_64                                                                                   32/100 
+  Verifying  : kexec-tools-2.0.15-51.el7_9.3.x86_64                                                                                               33/100 
+  Verifying  : unzip-6.0-22.el7_9.x86_64                                                                                                          34/100 
+  Verifying  : python-syspurpose-1.24.48-1.el7_9.x86_64                                                                                           35/100 
+  Verifying  : glibc-2.17-324.el7_9.x86_64                                                                                                        36/100 
+  Verifying  : 12:dhclient-4.2.5-83.el7_9.1.x86_64                                                                                                37/100 
+  Verifying  : 1:grub2-tools-minimal-2.02-0.87.el7_9.6.x86_64                                                                                     38/100 
+  Verifying  : nss-tools-3.53.1-7.el7_9.x86_64                                                                                                    39/100 
+  Verifying  : kernel-headers-3.10.0-1160.31.1.el7.x86_64                                                                                         40/100 
+  Verifying  : 32:bind-license-9.11.4-26.P2.el7_9.5.noarch                                                                                        41/100 
+  Verifying  : 1:grub2-common-2.02-0.87.el7_9.6.noarch                                                                                            42/100 
+  Verifying  : kernel-devel-3.10.0-1160.31.1.el7.x86_64                                                                                           43/100 
+  Verifying  : glib2-2.56.1-9.el7_9.x86_64                                                                                                        44/100 
+  Verifying  : 32:bind-libs-lite-9.11.4-26.P2.el7_9.5.x86_64                                                                                      45/100 
+  Verifying  : glibc-headers-2.17-324.el7_9.x86_64                                                                                                46/100 
+  Verifying  : nss-sysinit-3.53.1-7.el7_9.x86_64                                                                                                  47/100 
+  Verifying  : 7:lvm2-libs-2.02.187-6.el7_9.5.x86_64                                                                                              48/100 
+  Verifying  : 7:device-mapper-event-libs-1.02.170-6.el7_9.5.x86_64                                                                               49/100 
+  Verifying  : python-perf-3.10.0-1160.31.1.el7.x86_64                                                                                            50/100 
+  Verifying  : 1:grub2-pc-modules-2.02-0.87.el7_9.6.noarch                                                                                        51/100 
+  Verifying  : nss-tools-3.53.1-3.el7_9.x86_64                                                                                                    52/100 
+  Verifying  : 7:device-mapper-event-libs-1.02.170-6.el7_9.3.x86_64                                                                               53/100 
+  Verifying  : 2:microcode_ctl-2.1-73.8.el7_9.x86_64                                                                                              54/100 
+  Verifying  : open-vm-tools-11.0.5-3.el7_9.1.x86_64                                                                                              55/100 
+  Verifying  : glibc-common-2.17-323.el7_9.x86_64                                                                                                 56/100 
+  Verifying  : 7:device-mapper-event-1.02.170-6.el7_9.3.x86_64                                                                                    57/100 
+  Verifying  : 1:grub2-common-2.02-0.87.el7_9.2.noarch                                                                                            58/100 
+  Verifying  : subscription-manager-1.24.45-1.el7_9.x86_64                                                                                        59/100 
+  Verifying  : 7:lvm2-2.02.187-6.el7_9.3.x86_64                                                                                                   60/100 
+  Verifying  : 1:grub2-tools-minimal-2.02-0.87.el7_9.2.x86_64                                                                                     61/100 
+  Verifying  : unzip-6.0-20.el7.x86_64                                                                                                            62/100 
+  Verifying  : 12:dhclient-4.2.5-82.el7.x86_64                                                                                                    63/100 
+  Verifying  : sos-3.9-5.el7_9.2.noarch                                                                                                           64/100 
+  Verifying  : 1:grub2-tools-extra-2.02-0.87.el7_9.2.x86_64                                                                                       65/100 
+  Verifying  : kernel-headers-3.10.0-1160.15.2.el7.x86_64                                                                                         66/100 
+  Verifying  : glibc-2.17-323.el7_9.x86_64                                                                                                        67/100 
+  Verifying  : nss-sysinit-3.53.1-3.el7_9.x86_64                                                                                                  68/100 
+  Verifying  : kexec-tools-2.0.15-51.el7_9.1.x86_64                                                                                               69/100 
+  Verifying  : 7:device-mapper-1.02.170-6.el7_9.3.x86_64                                                                                          70/100 
+  Verifying  : 1:grub2-pc-modules-2.02-0.87.el7_9.2.noarch                                                                                        71/100 
+  Verifying  : 7:device-mapper-libs-1.02.170-6.el7_9.3.x86_64                                                                                     72/100 
+  Verifying  : gssproxy-0.7.0-29.el7.x86_64                                                                                                       73/100 
+  Verifying  : redhat-release-server-7.9-5.el7_9.x86_64                                                                                           74/100 
+  Verifying  : glib2-2.56.1-8.el7.x86_64                                                                                                          75/100 
+  Verifying  : nss-3.53.1-3.el7_9.x86_64                                                                                                          76/100 
+  Verifying  : glibc-devel-2.17-323.el7_9.x86_64                                                                                                  77/100 
+  Verifying  : 1:dmidecode-3.2-5.el7.x86_64                                                                                                       78/100 
+  Verifying  : kernel-tools-libs-3.10.0-1160.15.2.el7.x86_64                                                                                      79/100 
+  Verifying  : 7:lvm2-libs-2.02.187-6.el7_9.3.x86_64                                                                                              80/100 
+  Verifying  : openldap-2.4.44-22.el7.x86_64                                                                                                      81/100 
+  Verifying  : 12:dhcp-libs-4.2.5-82.el7.x86_64                                                                                                   82/100 
+  Verifying  : 32:bind-license-9.11.4-26.P2.el7_9.4.noarch                                                                                        83/100 
+  Verifying  : kernel-tools-3.10.0-1160.15.2.el7.x86_64                                                                                           84/100 
+  Verifying  : subscription-manager-rhsm-certificates-1.24.45-1.el7_9.x86_64                                                                      85/100 
+  Verifying  : 1:grub2-2.02-0.87.el7_9.2.x86_64                                                                                                   86/100 
+  Verifying  : 32:bind-libs-lite-9.11.4-26.P2.el7_9.4.x86_64                                                                                      87/100 
+  Verifying  : python-firewall-0.6.3-12.el7.noarch                                                                                                88/100 
+  Verifying  : glibc-headers-2.17-323.el7_9.x86_64                                                                                                89/100 
+  Verifying  : subscription-manager-rhsm-1.24.45-1.el7_9.x86_64                                                                                   90/100 
+  Verifying  : python-perf-3.10.0-1160.15.2.el7.x86_64                                                                                            91/100 
+  Verifying  : 1:grub2-pc-2.02-0.87.el7_9.2.x86_64                                                                                                92/100 
+  Verifying  : 1:grub2-tools-2.02-0.87.el7_9.2.x86_64                                                                                             93/100 
+  Verifying  : python-syspurpose-1.24.45-1.el7_9.x86_64                                                                                           94/100 
+  Verifying  : 32:bind-export-libs-9.11.4-26.P2.el7_9.4.x86_64                                                                                    95/100 
+  Verifying  : firewalld-0.6.3-12.el7.noarch                                                                                                      96/100 
+  Verifying  : 12:dhcp-common-4.2.5-82.el7.x86_64                                                                                                 97/100 
+  Verifying  : 32:bind-utils-9.11.4-26.P2.el7_9.4.x86_64                                                                                          98/100 
+  Verifying  : firewalld-filesystem-0.6.3-12.el7.noarch                                                                                           99/100 
+  Verifying  : 32:bind-libs-9.11.4-26.P2.el7_9.4.x86_64                                                                                          100/100 
+
+Installed:
+  kernel.x86_64 0:3.10.0-1160.31.1.el7                                     kernel-devel.x86_64 0:3.10.0-1160.31.1.el7                                    
+
+Updated:
+  bind-export-libs.x86_64 32:9.11.4-26.P2.el7_9.5                      bind-libs.x86_64 32:9.11.4-26.P2.el7_9.5                                         
+  bind-libs-lite.x86_64 32:9.11.4-26.P2.el7_9.5                        bind-license.noarch 32:9.11.4-26.P2.el7_9.5                                      
+  bind-utils.x86_64 32:9.11.4-26.P2.el7_9.5                            device-mapper.x86_64 7:1.02.170-6.el7_9.5                                        
+  device-mapper-event.x86_64 7:1.02.170-6.el7_9.5                      device-mapper-event-libs.x86_64 7:1.02.170-6.el7_9.5                             
+  device-mapper-libs.x86_64 7:1.02.170-6.el7_9.5                       dhclient.x86_64 12:4.2.5-83.el7_9.1                                              
+  dhcp-common.x86_64 12:4.2.5-83.el7_9.1                               dhcp-libs.x86_64 12:4.2.5-83.el7_9.1                                             
+  dmidecode.x86_64 1:3.2-5.el7_9.1                                     firewalld.noarch 0:0.6.3-13.el7_9                                                
+  firewalld-filesystem.noarch 0:0.6.3-13.el7_9                         glib2.x86_64 0:2.56.1-9.el7_9                                                    
+  glibc.x86_64 0:2.17-324.el7_9                                        glibc-common.x86_64 0:2.17-324.el7_9                                             
+  glibc-devel.x86_64 0:2.17-324.el7_9                                  glibc-headers.x86_64 0:2.17-324.el7_9                                            
+  grub2.x86_64 1:2.02-0.87.el7_9.6                                     grub2-common.noarch 1:2.02-0.87.el7_9.6                                          
+  grub2-pc.x86_64 1:2.02-0.87.el7_9.6                                  grub2-pc-modules.noarch 1:2.02-0.87.el7_9.6                                      
+  grub2-tools.x86_64 1:2.02-0.87.el7_9.6                               grub2-tools-extra.x86_64 1:2.02-0.87.el7_9.6                                     
+  grub2-tools-minimal.x86_64 1:2.02-0.87.el7_9.6                       gssproxy.x86_64 0:0.7.0-30.el7_9                                                 
+  kernel-headers.x86_64 0:3.10.0-1160.31.1.el7                         kernel-tools.x86_64 0:3.10.0-1160.31.1.el7                                       
+  kernel-tools-libs.x86_64 0:3.10.0-1160.31.1.el7                      kexec-tools.x86_64 0:2.0.15-51.el7_9.3                                           
+  lvm2.x86_64 7:2.02.187-6.el7_9.5                                     lvm2-libs.x86_64 7:2.02.187-6.el7_9.5                                            
+  microcode_ctl.x86_64 2:2.1-73.9.el7_9                                nss.x86_64 0:3.53.1-7.el7_9                                                      
+  nss-sysinit.x86_64 0:3.53.1-7.el7_9                                  nss-tools.x86_64 0:3.53.1-7.el7_9                                                
+  open-vm-tools.x86_64 0:11.0.5-3.el7_9.3                              openldap.x86_64 0:2.4.44-23.el7_9                                                
+  python-firewall.noarch 0:0.6.3-13.el7_9                              python-perf.x86_64 0:3.10.0-1160.31.1.el7                                        
+  python-syspurpose.x86_64 0:1.24.48-1.el7_9                           redhat-release-server.x86_64 0:7.9-6.el7_9                                       
+  sos.noarch 0:3.9-5.el7_9.4                                           subscription-manager.x86_64 0:1.24.48-1.el7_9                                    
+  subscription-manager-rhsm.x86_64 0:1.24.48-1.el7_9                   subscription-manager-rhsm-certificates.x86_64 0:1.24.48-1.el7_9                  
+  unzip.x86_64 0:6.0-22.el7_9                                         
+
+Complete!
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo rpm -qa | grep unzip
+unzip-6.0-22.el7_9.x86_64
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo yum downgrade unzip
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Resolving Dependencies
+--> Running transaction check
+---> Package unzip.x86_64 0:6.0-20.el7 will be a downgrade
+---> Package unzip.x86_64 0:6.0-22.el7_9 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=========================================================================================================================================================
+ Package                         Arch                             Version                                Repository                                 Size
+=========================================================================================================================================================
+Downgrading:
+ unzip                           x86_64                           6.0-20.el7                             ewp_os_rhel7_11                           170 k
+
+Transaction Summary
+=========================================================================================================================================================
+Downgrade  1 Package
+
+Total download size: 170 k
+Is this ok [y/d/N]: y
+Downloading packages:
+unzip-6.0-20.el7.x86_64.rpm                                                                                                       | 170 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : unzip-6.0-20.el7.x86_64                                                                                                               1/2 
+  Cleanup    : unzip-6.0-22.el7_9.x86_64                                                                                                             2/2 
+  Verifying  : unzip-6.0-20.el7.x86_64                                                                                                               1/2 
+  Verifying  : unzip-6.0-22.el7_9.x86_64                                                                                                             2/2 
+
+Removed:
+  unzip.x86_64 0:6.0-22.el7_9                                                                                                                            
+
+Installed:
+  unzip.x86_64 0:6.0-20.el7                                                                                                                              
+
+Complete!
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# sudo rpm -qa | grep unzip
+unzip-6.0-20.el7.x86_64
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# 
+[root@bjtestico00 admin]# init 6
+
+
+
+after that relogin .
+
+run the below command :
+
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ uname -a
+Linux bjtestico00 3.10.0-1160.31.1.el7.x86_64 #1 SMP Wed May 26 20:18:08 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+[admin@bjtestico00 ~]$ 
+
